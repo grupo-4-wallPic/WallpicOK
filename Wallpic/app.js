@@ -12,7 +12,7 @@ const productRoutes = require ('./routes/productRoutes');
 const cartRoutes = require('./routes/cartRoutes');
 const session = require ('express-session');
 const cookieParser = require ('cookie-parser')
-const log = require ('../Sprint-2/middlewares/log')
+const log = require ('../Wallpic/middlewares/log')
 
 const app = express();
 
