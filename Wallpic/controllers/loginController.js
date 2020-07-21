@@ -32,5 +32,15 @@ module.exports = {
         return res.render('loginView', {errors: errors.mapped(), old:req.body});
         }   
     },
+    logout: function(req, res) {
+        // Desloguear al usuario
     
+        req.session.destroy();
+    
+        if(req.cookies.email){
+          res.clearCookie('email');
+        }
+    
+        return res.redirect('/')
+    }
 }

@@ -30,9 +30,12 @@
         <div class="burger-menu">
             <i class="fas fa-bars Burguer" id="open-mobile-menu"></i>
         </div>
-        <!-- LogIn and Register -->
+        <!-- Si estoy logueado -->
         <% if (locals.user) { %>
-			<a href="/register" class="header-btn" id="cerrar">Cerrar Sesión</a>
+            <form action="/logout" method="POST">
+                <button class="header-btn" id="cerrar" type="submit">Cerrar sesión
+                </button>
+            </form>
         <% } else {%>
 
             <!-- Si no estoy logueado -->
