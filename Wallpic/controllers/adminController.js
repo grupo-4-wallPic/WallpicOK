@@ -7,17 +7,25 @@ module.exports = {
 
     main: (req, res) => {
 
-        db.Categories.findAll()
-        .then((categorias) => {
+       let categories = db.Categories.findAll()
+       let sizes = db.Sizes.findAll()
+       let colors = db.Colors.findAll()
 
-          return res.render('adminForms', { categorias })
+       Promise.all( [categories, sizes, colors] )
+            .then(([categories, sizes, colors]) => {
+
+            return res.render('adminForms', { categories, sizes, colors })
 
         })
    
     },
 
     productList: (req, res) => {
-        res.render('adminList')
+        db.Products.findAll()
+        .then((products) => {
+            res.render('adminList', {products}) 
+        })
+        
     },
 
     newProduct: (req, res, next) => {
@@ -27,7 +35,9 @@ module.exports = {
             images     : req.files[0].filename,
             categoryId : req.body.category
         })
-        res.redirect('/admin')
+        .then(() => {
+            res.redirect('/admin')  
+          })
     },
 
     newColor: (req, res) => {
@@ -35,8 +45,10 @@ module.exports = {
         db.Colors.create({
             color: req.body.color
         })
-        
-        res.redirect('/admin') 
+        .then(() => {
+          res.redirect('/admin')  
+        })
+         
        
     },
 
@@ -45,16 +57,18 @@ module.exports = {
             size : req.body.size,
             price: req.body.price
         })
-        
-        res.redirect('/admin') 
+        .then(() => {
+            res.redirect('/admin')  
+          }) 
     },
     
     newCategory: (req, res) => {
         db.Categories.create({
             name: req.body.name
         })
-        
-        res.redirect('/admin') 
+        .then(() => {
+            res.redirect('/admin')  
+          }) 
     },
 
 }

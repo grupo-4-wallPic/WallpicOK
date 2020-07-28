@@ -46,7 +46,7 @@
                 <div>
                     <label for="category">Elegí una categoría</label>
                     <select name="category" id="">
-                        <% categorias.forEach( (categoria) => { %>  
+                        <% categories.forEach( (categoria) => { %>  
                         <option value="<%= categoria.id %>">
                             <%= categoria.name  %> 
                         </option>
@@ -68,16 +68,33 @@
                 <div class="form-cont-dblist">
                     <h3>Colores disponibles</h3>
                     <div class="form-dblist">
-                        <p></p>
+                        <ul>  
+                            <% colors.forEach( (color) => { %>
+                               <li class="form-list-color" id="<%= color.id %>"><%= color.color %></li>
+                            <% }) %>
+                        </ul>
                     </div>
                     <span class="admin-select-text">Seleccioná un color para editar o eliminar</span>
                 </div>
-                <form action="admin/color" method="POST">
+                <form action="admin/color" method="POST" id="admin-color-form-create">
                     <div class="input-container">
                         <label for="color">Ingresá un nuevo color</label>
                         <input type="text" class="admin-form-input" name="color">
                     </div>
                     <button type="submit" class="form-btn-submit">Crear nuevo</button>
+                </form>
+                <form action="" id="admin-form-color-update" method="POST">
+                    <div class="input-container">
+                        <label for="color">Editá el color</label>
+                        <input type="text" class="admin-form-input" name="color" id="color-form-input-update" value="">
+                    </div>
+                    <div>
+                        <button type="submit" class="form-btn-submit">Editar</button>
+                        <button type="reset" class="form-btn-submit">Reset</button>
+                    </div>
+                </form>
+                <form action="" id="form-destroy-color" method="POST">
+                    <button type="submit" class="form-btn-submit">Eliminar</button>
                 </form>
             </div>
             <!-- Formulario medidas -->
@@ -85,20 +102,42 @@
                 <div class="form-cont-dblist">
                     <h3>Medidas disponibles</h3>
                     <div class="form-dblist">
-                        <p></p>
+                        <ul>  
+                            <% sizes.forEach( (size) => { %>
+                                <li class="form-list-size" id="<%= size.id %>"><span id="list-size"><%= size.size %></span> - $<span id="list-size-price"><%= size.price %></span></li>
+                            <% }) %>
+                        </ul>
                     </div>
                     <span class="admin-select-text">Seleccioná una medida para editar o eliminar</span>
                 </div>
-                <form action="admin/size" method="POST">
+                <form action="admin/size" method="POST" id="admin-size-form-create">
                     <div class="input-container">
-                        <label for="color">Ingresá una nueva medida</label>
+                        <label for="size">Ingresá una nueva medida</label>
                         <input type="text" class="admin-form-input" name="size">
                     </div>
                     <div class="input-container">
-                        <label for="color">Ingresá un precio para esta medida</label>
+                        <label for="price">Ingresá un precio para esta medida</label>
                         <input type="text" class="admin-form-input" name="price">
                     </div>
                     <button type="submit" class="form-btn-submit">Crear nuevo</button>
+                </form>
+                <form action="" id="admin-size-form-update" method="POST">
+                    <div class="input-container">
+                        <label for="color">Editá la medida</label>
+                        <input type="text" class="admin-form-input" name="size" id="size-input-size" value="">
+                    </div>
+                    <div class="input-container">
+                        <label for="price">Editá el precio para esta medida</label>
+                        <input type="text" class="admin-form-input"  name="price" id="input-price"
+                        value="">
+                    </div>
+                    <div>
+                        <button type="submit" class="form-btn-submit">Editar</button>
+                        <button type="reset" class="form-btn-submit">Reset</button>
+                    </div>
+                </form>
+                <form action="" id="form-destroy-size" method="POST">
+                    <button type="submit" class="form-btn-submit">Eliminar</button>
                 </form>
             </div>
             <!-- Formulario Categorías -->
@@ -106,7 +145,11 @@
                 <div class="form-cont-dblist">
                     <h3>Categorías disponibles</h3>
                     <div class="form-dblist">
-                        <p></p>
+                        <ul>  
+                            <% categories.forEach( (categorie) => { %>
+                               <li><a href="/admin/list/<%= categorie.id %>"><%= categorie.name %></a></li>
+                            <% }) %>
+                        </ul>
                     </div>
                     <span class="admin-select-text">Seleccioná una categoría para editar o eliminar</span>
                 </div>
@@ -124,6 +167,7 @@
     <p style="text-align: center; color: red;">errores</p>
 
     <%- include('./partials/footer') %>
+    <script src="/JS/adminModal.js"></script>
 </body>
 
 </html>

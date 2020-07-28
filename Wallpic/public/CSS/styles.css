@@ -1006,6 +1006,7 @@ footer {
     border-radius: 15px;
     box-shadow: 3px 3px 4px 0px rgba(143,139,143,1);
     font-family: var(--primary-font);
+    font-size: 14px;
 }
 
 .admin-buttons {
@@ -1073,13 +1074,14 @@ footer {
 }
 
 .forms-lists form {
-    height: 45%;
+    /* height: 45%; */
     max-width: 400px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    font-size: 12px;
 }
 
 .form-cont-dblist {
@@ -1101,6 +1103,7 @@ footer {
 }
 
 .form-btn-submit {
+    margin-top: 5px;
     border-radius: 5px;
     background: white;
     border: 1px solid var(--strong-grey);
@@ -1142,7 +1145,22 @@ footer {
 .admin-select-text {
     color: red;
 }
+#admin-size-form-update {
+    display: none;
+}
 
+#form-destroy-size {
+    display: none;
+}
+
+#admin-form-color-update {
+    display: none;
+}
+
+#form-destroy-color{
+    display: none;
+    height: 25px;
+}
 
 #admin-form-new {
     display: none;
