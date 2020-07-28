@@ -1113,6 +1113,138 @@ footer {
     display: none;
 }
 
+/*** Perfil ***/
+.datos-perfil {
+    display: flex;
+    justify-content: space-around;
+    width: 22%;
+    background-color: white;
+    margin-left: 2%;
+    justify-content: end;
+    box-shadow: 1px 7px 8px 0px rgba(143,139,143,1);
+    border-radius: 15px;
+}
+
+.datos-perfil ul{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.datos-perfil li{
+    list-style: none;
+    display: flex;
+    padding: 20%;
+}
+
+.datos-perfil a{
+    text-decoration: none;
+    color: black;
+    font-family: var(--secundary-font);
+    font-size: 25px;
+}
+
+.nombre-perfil {
+    text-decoration: none;
+    color: black;
+    font-family: var(--secundary-font);
+    font-size: 25px;
+}
+
+.bienvenida-perfil {
+    background-color: white;
+    padding: 1%;
+    text-align: center;
+    font-family: var(--primary-font);
+    border-radius: 15px;
+}
+
+.historial-compras {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 60%;
+    margin-left: 8%;
+    box-shadow: 1px 7px 8px 0px rgba(143,139,143,1);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.historial-compras h2 {
+    font-family: var(--primary-font);
+}
+
+.historial-compras ul {
+    list-style: none;
+    font-family: var(--secundary-font);
+    padding: 3%;
+    text-align: left;
+    padding-bottom: 0;
+}
+
+.historial-compras li {
+    list-style: none;
+    font-family: var(--secundary-font);
+    text-align: left;
+    margin-left: 5%;
+}
+
+.historial-compras a {
+    text-decoration: none;
+    color: black;
+    font-family: var(--secundary-font);
+}
+
+.contenedor-historial {
+    display: flex;
+}
+
+.compra-1 {
+    border-left: 1px dotted black;
+    border-bottom: 1px dotted black;
+    border-top: 1px dotted black;
+    width: 28%;
+    height: 20%;
+    margin-left: 2%;
+    border-radius: 3px;
+    margin-top: 3%;
+}
+
+.producto-fav {
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    font-family: var(--secundary-font);
+}
+
+.datos-personales {
+    display: flex;
+}
+
+.medios-de-pago {
+    display: flex;
+    flex-direction: column;
+    border: 1px dotted black;
+    border-radius: 4px;
+    margin-right: auto;
+    margin-left: 14%;
+    width: 30%;
+}
+
+.medios-de-pago li{
+    text-align: left;
+}
+
+.direcciones-personales {
+    display: flex;
+    flex-direction: column;
+    border: 1px dotted black;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: 14%;
+    width: 30%;
+}
+
 /*** Media Querys ***/
 
 @media screen and (min-width: 320px) {

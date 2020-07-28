@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi perfil</title>
+    <%- include('./partials/head') %> 
+</head>
+<body>
+    <%- include('./partials/header') %>
+    <br>
+    <div>
+        <h2 class="bienvenida-perfil">Bienvenide Nombre</h2>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="contenedor-historial">
+    <div class="datos-perfil">
+        <ul>
+            <li class="nombre-perfil"><i class="fas fa-user-circle"></i>Nombre</li>
+            <li> <a href="/user/compras"><i class="fas fa-shopping-basket"></i>Mis Compras</a></li>
+            <li> <a href="/user/favoritos"><i class="fas fa-star"></i>Mis Favoritos</a></li>
+            <li> <a href="/user/datos"><i class="fas fa-id-badge"></i>Mis Datos</a></li>
+        </ul>
+    </div>
+
+    <div class="historial-compras">
+        <h2>Historial de compras</h2>
+        <div class="compra-1">
+        <ul><i class="fas fa-shopping-basket"></i>       Aqui va una compra</ul>
+            <li><a href="">Ver detalle de la compra</a></li>
+        </div>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <%- include('./partials/footer') %>
+</body>
+</html>

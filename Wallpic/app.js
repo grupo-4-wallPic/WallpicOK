@@ -10,6 +10,7 @@ const homeRoutes = require('./routes/homeRoutes');
 const categoryRoutes = require ('./routes/categoryRoutes');
 const productRoutes = require ('./routes/productRoutes');
 const cartRoutes = require('./routes/cartRoutes');
+const userRoutes = require ('./routes/userRoutes')
 const session = require ('express-session');
 const cookieParser = require ('cookie-parser')
 const log = require ('../Wallpic/middlewares/log')
@@ -35,6 +36,7 @@ app.use('/products', productRoutes);
 app.use('/cart', cartRoutes)
 app.use('/admin', adminRoutes)
 app.use('/pruebas', pruebasRoutes)
+app.use('/user', userRoutes)
 
 
 

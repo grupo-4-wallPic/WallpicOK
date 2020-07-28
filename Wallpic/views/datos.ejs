@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi perfil</title>
+    <%- include('./partials/head') %> 
+</head>
+<body>
+    <%- include('./partials/header') %>
+    <br>
+    <div>
+        <h2 class="bienvenida-perfil">Bienvenide Nombre</h2>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="contenedor-historial">
+    <div class="datos-perfil">
+        <ul>
+            <li class="nombre-perfil"><i class="fas fa-user-circle"></i>Nombre</li>
+            <li> <a href="/user/compras"><i class="fas fa-shopping-basket"></i>Mis Compras</a></li>
+            <li> <a href="/user/favoritos"><i class="fas fa-star"></i>Mis Favoritos</a></li>
+            <li> <a href="/user/datos"><i class="fas fa-id-badge"></i>Mis Datos</a></li>
+        </ul>
+    </div>
+
+    <div class="historial-compras">
+        <h2>Nombre</h2>
+        <section class="datos-personales">
+        <article class="medios-de-pago">
+            <h3>Mis medios de pago</h3>
+            <ul>
+                <li><i class="fas fa-credit-card"></i> Visa ***324</li>
+                <br>
+                <li><i class="fas fa-credit-card"></i> Amex ***668</li>
+            </ul>
+        </article>
+        <article class="direcciones-personales">
+            <h3>Mis direcciones</h3>
+            <ul>
+                <li><i class="fas fa-home"></i>  Av Cabildo 756</li>
+            </ul>
+        </article>
+        </section>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <%- include('./partials/footer') %>
+</body>
+</html>
