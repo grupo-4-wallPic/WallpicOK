@@ -6,7 +6,18 @@ const Op = db.Sequelize.Op
 module.exports = {
 
     main: (req, res) => {
-        res.render('adminForms')
+
+        db.Categories.findAll()
+        .then((categorias) => {
+
+          return res.render('adminForms', { categorias })
+
+        })
+   
+    },
+
+    productList: (req, res) => {
+        res.render('adminList')
     },
 
     newProduct: (req, res, next) => {

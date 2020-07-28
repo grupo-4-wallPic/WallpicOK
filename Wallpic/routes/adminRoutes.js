@@ -8,6 +8,7 @@ const adminController = require('../controllers/adminController');
 
 let storage = multer.diskStorage({
     destination: function (req, file, cb) {
+      // console.log('hola')
       cb(null, 'public/images/products')
     },
     filename: function (req, file, cb) {
@@ -23,5 +24,6 @@ router.post('/new', upload.any(), adminController.newProduct)
 router.post('/color', adminController.newColor)
 router.post('/size', adminController.newSize)
 router.post('/category', adminController.newCategory)
+router.get('/list', adminController.productList)
 
 module.exports = router;

@@ -12,8 +12,8 @@
     <%- include('./partials/header') %>
     <div class="admin-general-container">
     <div class="admin-top-buttons">
-        <a href="/admin/list"><button class="admin-top-btn admin-button">Pics</button></a>
-        <a href="/admin"><button class="admin-top-btn admin-button">Crear</button></a>
+        <a href=""><button class="admin-top-btn admin-button">Pics</button></a>
+        <a href=""><button class="admin-top-btn admin-button">Crear</button></a>
         <!-- <a href=""><button class="admin-top-btn admin-button">Editar</button></a> -->
     </div>
     <div class="admin-container">
@@ -46,11 +46,8 @@
                 <div>
                     <label for="category">Elegí una categoría</label>
                     <select name="category" id="">
-                        <% categorias.forEach( (categoria) => { %>  
-                        <option value="<%= categoria.id %>">
-                            <%= categoria.name  %> 
-                        </option>
-                        <% }) %>
+                        <option value="1">Animales</option>
+                        <option value="2">Ciudades</option>
                     </select>
                 </div>
                 <div class="input-container">
@@ -70,7 +67,6 @@
                     <div class="form-dblist">
                         <p></p>
                     </div>
-                    <span class="admin-select-text">Seleccioná un color para editar o eliminar</span>
                 </div>
                 <form action="admin/color" method="POST">
                     <div class="input-container">
@@ -87,7 +83,6 @@
                     <div class="form-dblist">
                         <p></p>
                     </div>
-                    <span class="admin-select-text">Seleccioná una medida para editar o eliminar</span>
                 </div>
                 <form action="admin/size" method="POST">
                     <div class="input-container">
@@ -108,7 +103,6 @@
                     <div class="form-dblist">
                         <p></p>
                     </div>
-                    <span class="admin-select-text">Seleccioná una categoría para editar o eliminar</span>
                 </div>
                 <form action="admin/category" method="POST">
                     <div class="input-container">

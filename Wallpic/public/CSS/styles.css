@@ -986,16 +986,26 @@ footer {
 
 /*******Admin Styles********/
 
+.admin-general-container{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .admin-container {
     height: 70vh;
     min-height: 440px;
     width: 100%;
     max-width: 700px;
-    margin: 15px auto;
+    margin-top: 15px;
     padding: 22px;
     background-color: white;
     border-radius: 15px;
-    box-shadow: 10px 7px 5px 0px rgba(143,139,143,1);
+    box-shadow: 3px 3px 4px 0px rgba(143,139,143,1);
+    font-family: var(--primary-font);
 }
 
 .admin-buttons {
@@ -1096,6 +1106,43 @@ footer {
     border: 1px solid var(--strong-grey);
     width: 110px;
 }
+
+.admin-top-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.admin-top-btn {
+    width: 85px;
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    font-family: var(--primary-font);
+    box-shadow: 3px 3px 4px 0px rgba(143,139,143,1);
+    cursor: pointer;
+}
+
+.whole-list{
+    height: 90%;
+    border: 1px solid var(--strong-grey);
+    border-radius: 5px;
+    padding: 3px;
+    overflow: scroll;
+}
+
+.whole-list p {
+    margin: 2px;
+    /* font-family: var(--primary-font); */
+}
+
+.admin-select-text {
+    color: red;
+}
+
 
 #admin-form-new {
     display: none;
