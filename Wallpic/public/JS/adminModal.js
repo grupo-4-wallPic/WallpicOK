@@ -79,11 +79,11 @@ colorList.forEach( (color) => {
         updateColor.style.display="flex"
         // Pongo valores en el formulario update y en delete
         document.querySelector('#color-form-input-update').attributes.value.value = colorName
-        document.querySelector("#admin-form-color-update").attributes.action.value= `admin/color/update/${idColor}`
+        document.querySelector("#admin-form-color-update").attributes.action.value= `admin/color/update/${idColor}?_method=PUT`
         // Formulario destroy
         
         destroyColor.style.display= 'flex'
-        destroyColor.attributes.action.value= `admin/color/delete/${idColor}`
+        destroyColor.attributes.action.value= `admin/color/delete/${idColor}?_method=DELETE`
         // console.log(input)
     })
 })  
@@ -109,11 +109,11 @@ sizeList.forEach( (size) => {
         document.querySelector('#size-input-size').attributes.value.value = sizeName;
         let precio = document.querySelector('#input-price').attributes.value.value = sizePrice;
         
-        document.querySelector("#admin-size-form-update").attributes.action.value= `admin/size/update/${idSize}`
+        document.querySelector("#admin-size-form-update").attributes.action.value= `admin/size/update/${idSize}?_method=PUT`
         // Formulario destroy, valores y display
         
         destroySize.style.display= 'flex'
-        destroySize.attributes.action.value= `admin/color/delete/${idSize}`
+        destroySize.attributes.action.value= `admin/color/delete/${idSize}?_method=DELETE`
         // console.log(input)
     })
 })   
@@ -136,11 +136,11 @@ categoriesList.forEach( (category) => {
         updateCategory.style.display="flex"
         // Pongo valores en el formulario update y en delete
         document.querySelector('#category-form-input-update').attributes.value.value = categoryName
-        document.querySelector("#admin-category-form-update").attributes.action.value= `admin/color/update/${categoryId}`
+        document.querySelector("#admin-category-form-update").attributes.action.value= `admin/category/update/${categoryId}?_method=PUT`
         // Formulario destroy
     
         destroyCategory.style.display= 'flex'
-        destroyCategory.attributes.action.value= `admin/color/delete/${categoryId}`
+        destroyCategory.attributes.action.value= `admin/category/delete/${categoryId}?_method=DELETE`
         // console.log(input)
     })
 })  

@@ -1,4 +1,5 @@
 const db = require('../database/models');
+const {Categories, Sizes, Colors, Products} = require('../database/models');
 const Op = db.Sequelize.Op
 
 
@@ -7,9 +8,9 @@ module.exports = {
 
     main: (req, res) => {
 
-       let categories = db.Categories.findAll()
-       let sizes = db.Sizes.findAll()
-       let colors = db.Colors.findAll()
+       let categories = Categories.findAll()
+       let sizes = Sizes.findAll()
+       let colors = Colors.findAll()
 
        Promise.all( [categories, sizes, colors] )
             .then(([categories, sizes, colors]) => {
@@ -21,7 +22,7 @@ module.exports = {
     },
 
     productList: (req, res) => {
-        db.Products.findAll()
+        Products.findAll()
         .then((products) => {
             res.render('adminList', {products}) 
         })
@@ -29,7 +30,7 @@ module.exports = {
     },
 
     newProduct: (req, res, next) => {
-        db.Products.create({
+        Products.create({
             name       : req.body.name,
             description: req.body.description,
             images     : req.files[0].filename,
@@ -42,7 +43,7 @@ module.exports = {
 
     newColor: (req, res) => {
        
-        db.Colors.create({
+        Colors.create({
             color: req.body.color
         })
         .then(() => {
@@ -52,8 +53,36 @@ module.exports = {
        
     },
 
+    updateColor: (req, res) => {
+
+        Colors.update({
+            color: req.body.color
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(() => {
+            res.redirect('/admin')
+        })
+
+    },
+
+    deleteColor: (req, res) => {
+
+        Colors.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(() => {
+            res.redirect('/admin')
+        })
+
+    },
+
     newSize: (req, res) => {
-        db.Sizes.create({
+        Sizes.create({
             size : req.body.size,
             price: req.body.price
         })
@@ -61,14 +90,22 @@ module.exports = {
             res.redirect('/admin')  
           }) 
     },
+
+    updateSize: (req, res) => {},
+
+    deleteSize: (req, res) => {},
     
     newCategory: (req, res) => {
-        db.Categories.create({
+        Categories.create({
             name: req.body.name
         })
         .then(() => {
             res.redirect('/admin')  
           }) 
     },
+
+    updateCategory: (req, res) => {},
+
+    deleteCategory: (req, res) => {},
 
 }
