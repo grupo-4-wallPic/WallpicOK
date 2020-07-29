@@ -1074,7 +1074,7 @@ footer {
 }
 
 .forms-lists form {
-    /* height: 45%; */
+    height: 30%;
     max-width: 400px;
     width: 100%;
     display: flex;
@@ -1145,12 +1145,22 @@ footer {
 .admin-select-text {
     color: red;
 }
+
+#form-destroy-category {
+    display: none;
+}
+
+#admin-category-form-update {
+    display: none;
+}
+
 #admin-size-form-update {
     display: none;
 }
 
 #form-destroy-size {
     display: none;
+    height: 25px !important;
 }
 
 #admin-form-color-update {
