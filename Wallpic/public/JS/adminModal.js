@@ -92,7 +92,7 @@ colorList.forEach( (color) => {
 // Size
 
 sizeList = document.querySelectorAll('.form-list-size')
-console.log(sizeList)
+
 // console.log(colorList)
 
 sizeList.forEach( (size) => {
