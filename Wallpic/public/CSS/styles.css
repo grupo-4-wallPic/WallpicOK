@@ -1948,6 +1948,28 @@ flex-direction: row;
 .container-categorias section{
     height: 100%;
 }
+.logdata{
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    margin: auto;
+}
+.logout {
+    text-decoration: underline;
+    border: none;
+    font-size: small;
+    cursor: pointer;
+    margin-top: 3px;
+}
+#logname {
+    border: none;
+    text-decoration: none;
+    color: black;
+    font-size: large;
+}
+#logname:hover{
+    font-size: larger;
+}
 
 
 }

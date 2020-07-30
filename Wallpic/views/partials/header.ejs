@@ -33,9 +33,11 @@
         <!-- Si estoy logueado -->
         <% if (locals.user) { %>
             <form action="/logout" method="POST">
-                <a href= #><%= locals.user.name %> <%=locals.user.lastname%> </a>
-                <button class="header-btn" id="cerrar" type="submit">Cerrar sesión
+                <div class="logdata">
+                <a class="logname" id="logname" href= #>Hola, <%= locals.user.name %>! </a>
+                <button class="logout" id="cerrar" type="submit">Cerrar sesión
                 </button>
+            </div>
             </form>
         <% } else {%>
 
