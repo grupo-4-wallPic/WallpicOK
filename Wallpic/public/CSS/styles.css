@@ -986,16 +986,27 @@ footer {
 
 /*******Admin Styles********/
 
+.admin-general-container{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .admin-container {
     height: 70vh;
     min-height: 440px;
     width: 100%;
     max-width: 700px;
-    margin: 15px auto;
+    margin-top: 15px;
     padding: 22px;
     background-color: white;
     border-radius: 15px;
-    box-shadow: 10px 7px 5px 0px rgba(143,139,143,1);
+    box-shadow: 3px 3px 4px 0px rgba(143,139,143,1);
+    font-family: var(--primary-font);
+    font-size: 14px;
 }
 
 .admin-buttons {
@@ -1063,13 +1074,14 @@ footer {
 }
 
 .forms-lists form {
-    height: 45%;
+    height: 30%;
     max-width: 400px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    font-size: 12px;
 }
 
 .form-cont-dblist {
@@ -1091,10 +1103,94 @@ footer {
 }
 
 .form-btn-submit {
+    margin-top: 5px;
     border-radius: 5px;
     background: white;
     border: 1px solid var(--strong-grey);
     width: 110px;
+}
+
+.admin-top-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.admin-top-btn {
+    width: 85px;
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    font-family: var(--primary-font);
+    box-shadow: 3px 3px 4px 0px rgba(143,139,143,1);
+    cursor: pointer;
+}
+
+.whole-list{
+    height: 90%;
+    border: 1px solid var(--strong-grey);
+    border-radius: 5px;
+    padding: 3px;
+    overflow: scroll;
+}
+
+.whole-list p {
+    margin: 2px;
+    /* font-family: var(--primary-font); */
+}
+
+.admin-select-text {
+    color: red;
+}
+
+.form-list-ul-all {
+    margin: 0px;
+    padding: 10px;
+}  
+
+.form-list-all {
+    cursor: pointer;
+    margin-bottom: 5px;
+    list-style: none;
+}
+
+.form-list-all a {
+    text-decoration: none;
+    color: black;
+    font-family: var(--primary-font);
+}
+
+.form-list-all:hover {
+    background-color: var(--intermediate-grey);
+}
+
+#form-destroy-category {
+    display: none;
+}
+
+#admin-category-form-update {
+    display: none;
+}
+
+#admin-size-form-update {
+    display: none;
+}
+
+#form-destroy-size {
+    display: none;
+    height: 25px !important;
+}
+
+#admin-form-color-update {
+    display: none;
+}
+
+#form-destroy-color{
+    display: none;
+    height: 25px;
 }
 
 #admin-form-new {
@@ -1242,7 +1338,35 @@ footer {
     border-radius: 4px;
     margin-left: auto;
     margin-right: 14%;
+    width: 30%;}
+/* Vista detailProduct */
+
+.admin-detail {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.detail-figure {
     width: 30%;
+}
+
+.detail-figure img {
+    width: 100%;
+}
+
+.detail-cont-forms {
+    height: 70%;
+    text-align: center;
+}
+
+#form-update-product {
+    height: 90%;
+}
+
+
+#form-destroy-product {
+    height: 20px;
 }
 
 /*** Media Querys ***/
@@ -1295,6 +1419,14 @@ footer {
     }
 
     /**** Admin Styles ****/
+
+}
+
+@media screen and (min-width: 380px) {
+
+    #cont-detail{
+        flex-direction: row;
+    }
 
 }
 

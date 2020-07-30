@@ -10,7 +10,12 @@
 
 <body>
     <%- include('./partials/header') %>
-
+    <div class="admin-general-container">
+    <div class="admin-top-buttons">
+        <a href="/admin/productlist"><button class="admin-top-btn admin-button">Pics</button></a>
+        <a href="/admin"><button class="admin-top-btn admin-button">Crear</button></a>
+        <!-- <a href=""><button class="admin-top-btn admin-button">Editar</button></a> -->
+    </div>
     <div class="admin-container">
         <section class="admin-buttons">
             <div class="admin-button" id="btn-newpic">
@@ -41,8 +46,11 @@
                 <div>
                     <label for="category">Elegí una categoría</label>
                     <select name="category" id="">
-                        <option value="1">Animales</option>
-                        <option value="2">Ciudades</option>
+                        <% categories.forEach( (categoria) => { %>  
+                        <option value="<%= categoria.id %>">
+                            <%= categoria.name  %> 
+                        </option>
+                        <% }) %>
                     </select>
                 </div>
                 <div class="input-container">
@@ -60,15 +68,33 @@
                 <div class="form-cont-dblist">
                     <h3>Colores disponibles</h3>
                     <div class="form-dblist">
-                        <p></p>
+                        <ul class= "form-list-ul-all">  
+                            <% colors.forEach( (color) => { %>
+                               <li class="form-list-color form-list-all" id="<%= color.id %>"><%= color.color %></li>
+                            <% }) %>
+                        </ul>
                     </div>
+                    <span class="admin-select-text">Seleccioná un color para editar o eliminar</span>
                 </div>
-                <form action="admin/color" method="POST">
+                <form action="admin/color" method="POST" id="admin-color-form-create">
                     <div class="input-container">
                         <label for="color">Ingresá un nuevo color</label>
                         <input type="text" class="admin-form-input" name="color">
                     </div>
                     <button type="submit" class="form-btn-submit">Crear nuevo</button>
+                </form>
+                <form action="" id="admin-form-color-update" method="POST">
+                    <div class="input-container">
+                        <label for="color">Editá el color</label>
+                        <input type="text" class="admin-form-input" name="color" id="color-form-input-update" value="">
+                    </div>
+                    <div>
+                        <button type="submit" class="form-btn-submit">Editar</button>
+                        <button type="reset" class="form-btn-submit">Reset</button>
+                    </div>
+                </form>
+                <form action="" id="form-destroy-color" method="POST">
+                    <button type="submit" class="form-btn-submit">Eliminar</button>
                 </form>
             </div>
             <!-- Formulario medidas -->
@@ -76,19 +102,42 @@
                 <div class="form-cont-dblist">
                     <h3>Medidas disponibles</h3>
                     <div class="form-dblist">
-                        <p></p>
+                        <ul class= "form-list-ul-all">  
+                            <% sizes.forEach( (size) => { %>
+                                <li class="form-list-size form-list-all" id="<%= size.id %>"><span id="list-size"><%= size.size %></span> - $<span id="list-size-price"><%= size.price %></span></li>
+                            <% }) %>
+                        </ul>
                     </div>
+                    <span class="admin-select-text">Seleccioná una medida para editar o eliminar</span>
                 </div>
-                <form action="admin/size" method="POST">
+                <form action="admin/size" method="POST" id="admin-size-form-create">
                     <div class="input-container">
-                        <label for="color">Ingresá una nueva medida</label>
+                        <label for="size">Ingresá una nueva medida</label>
                         <input type="text" class="admin-form-input" name="size">
                     </div>
                     <div class="input-container">
-                        <label for="color">Ingresá un precio para esta medida</label>
+                        <label for="price">Ingresá un precio para esta medida</label>
                         <input type="text" class="admin-form-input" name="price">
                     </div>
                     <button type="submit" class="form-btn-submit">Crear nuevo</button>
+                </form>
+                <form action="" id="admin-size-form-update" method="POST">
+                    <div class="input-container">
+                        <label for="color">Editá la medida</label>
+                        <input type="text" class="admin-form-input" name="size" id="size-input-size" value="">
+                    </div>
+                    <div class="input-container">
+                        <label for="price">Editá el precio para esta medida</label>
+                        <input type="text" class="admin-form-input"  name="price" id="input-price"
+                        value="">
+                    </div>
+                    <div>
+                        <button type="submit" class="form-btn-submit">Editar</button>
+                        <button type="reset" class="form-btn-submit">Reset</button>
+                    </div>
+                </form>
+                <form action="" id="form-destroy-size" method="POST">
+                    <button type="submit" class="form-btn-submit">Eliminar</button>
                 </form>
             </div>
             <!-- Formulario Categorías -->
@@ -96,22 +145,42 @@
                 <div class="form-cont-dblist">
                     <h3>Categorías disponibles</h3>
                     <div class="form-dblist">
-                        <p></p>
+                        <ul class="form-list-ul-all">  
+                            <% categories.forEach( (category) => { %>
+                               <li class="form-list-categories form-list-all" id="<%= category.id %>"><%= category.name %></li>
+                            <% }) %>
+                        </ul>
                     </div>
+                    <span class="admin-select-text">Seleccioná una categoría para editar o eliminar</span>
                 </div>
-                <form action="admin/category" method="POST">
+                <form id="admin-category-form-create" action="admin/category" method="POST">
                     <div class="input-container">
                         <label for="color">Ingresá una nueva categoría</label>
                         <input type="text" class="admin-form-input" name="name">
                     </div>
                     <button type="submit" class="form-btn-submit">Crear nueva</button>
                 </form>
+                <form action="" id="admin-category-form-update" method="POST">
+                    <div class="input-container">
+                        <label for="color">Editá el color</label>
+                        <input type="text" class="admin-form-input" name="category" id="category-form-input-update" value="">
+                    </div>
+                    <div>
+                        <button type="submit" class="form-btn-submit">Editar</button>
+                        <button type="reset" class="form-btn-submit">Reset</button>
+                    </div>
+                </form>
+                <form action="" id="form-destroy-category" method="POST">
+                    <button type="submit" class="form-btn-submit">Eliminar</button>
+                </form>
             </div>
         </section>
+    </div>
     </div>
     <p style="text-align: center; color: red;">errores</p>
 
     <%- include('./partials/footer') %>
+    <script src="/JS/adminModal.js"></script>
 </body>
 
 </html>
