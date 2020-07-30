@@ -2,7 +2,7 @@ const db = require('../database/models');
 const {Categories, Sizes, Colors, Products} = require('../database/models');
 const Category = require('../database/models/Category');
 const Op = db.Sequelize.Op
-
+let fs = require('fs')
 
 
 module.exports = {
@@ -25,7 +25,7 @@ module.exports = {
     productList: (req, res) => {
         Products.findAll()
         .then((products) => {
-            res.render('adminList', {products}) 
+           return res.render('adminList', {products}) 
         })
         
     },
@@ -38,7 +38,7 @@ module.exports = {
             categoryId : req.body.category
         })
         .then(() => {
-            res.redirect('admin')  
+           return res.redirect('/admin')  
           })
     },
 
@@ -55,13 +55,51 @@ module.exports = {
 
     },
 
+    productUpdate: (req, res) => {
+        
+        Products.update({
+            name: req.body.name,
+            description: req.body.description,
+            categoryId : req.body.category
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(() => {
+           return res.redirect('/admin')
+        })
+
+    },
+
+    productDelete: (req, res) => {
+
+        let product = Products.findByPk(req.params.id)
+        
+        fs.unlinkSync(`../public/images/products/${product.images}`, (err) => {
+            if(err) throw err
+            console.log('file delected')
+        })
+
+        Products.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(() => {
+           return res.redirect('/admin')
+        })
+
+
+    },
+
     newColor: (req, res) => {
        
         Colors.create({
             color: req.body.color
         })
         .then(() => {
-          res.redirect('admin')  
+         return res.redirect('/admin')  
         })
          
        
@@ -77,7 +115,7 @@ module.exports = {
             }
         })
         .then(() => {
-            res.redirect('admin')
+           return res.redirect('/admin')
         })
 
     },
@@ -90,7 +128,7 @@ module.exports = {
             }
         })
         .then(() => {
-            res.redirect('admin')
+           return res.redirect('/admin')
         })
 
     },
@@ -101,7 +139,7 @@ module.exports = {
             price: req.body.price
         })
         .then(() => {
-            res.redirect('admin')  
+           return res.redirect('/admin')  
           }) 
     },
 
@@ -116,7 +154,7 @@ module.exports = {
             }
         })
         .then(() => {
-            res.redirect('admin')
+          return res.redirect('/admin')
         })
 
     },
@@ -129,7 +167,7 @@ module.exports = {
             }
         })
         .then(() => {
-            res.redirect('admin')
+           return res.redirect('/admin')
         })
 
     },
@@ -139,7 +177,7 @@ module.exports = {
             name: req.body.name
         })
         .then(() => {
-            res.redirect('admin')  
+           return res.redirect('/admin')  
           }) 
     },
 
@@ -153,7 +191,7 @@ module.exports = {
             }
         })
         .then(() => {
-            res.redirect('admin')
+           return res.redirect('/admin')
         })
 
     },
@@ -166,7 +204,7 @@ module.exports = {
             }
         })
         .then(() => {
-            res.redirect('admin')
+           return res.redirect('/admin')
         })
 
     },

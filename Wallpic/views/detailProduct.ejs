@@ -17,37 +17,44 @@
             <!-- <a href=""><button class="admin-top-btn admin-button">Editar</button></a> -->
         </div>
         <div class="admin-container">
-            <div class="admin-detail">
+            <div class="forms-lists" id="cont-detail">
                 <figure class="detail-figure">
                     <img src="../../images/products/<%= product.images %> " alt="">
                 </figure>
-                <form action="" method="post">
+                <div class="detail-cont-forms">
+                <form action="/admin/product/update/<%= product.id %>?_method=PUT" id='form-update-product' method="POST">
                     <div class="input-container">
-                        <label for="name"></label>
-                        <input type="text" name="name">
+                        <label for="name">Editá el nombre del producto</label>
+                        <input type="text" class="admin-form-input" name="name" value="<%= product.name %> ">
                     </div>
                     <div>
-                        <label for="category">Elegí una categoría</label>
+                        <label for="category">Editá la categoría</label>
                         <select name="category" id="">
-                            <% categories.forEach( (categoria) => { %>  
-                            <option value="<%= categoria.id %>">
-                                <%= categoria.name  %> 
-                            </option>
-                            <% }) %>
+                            <% categories.forEach( (categoria) => { %> 
+                            <% if (product.categoryId == categoria.id) { %>
+                                <option value="<%= categoria.id %>" selected>
+                                    <%= categoria.name  %> 
+                                </option>
+                            <% } else { %>
+                                <option value="<%= categoria.id %>">
+                                    <%= categoria.name  %> 
+                                </option>
+                            <% }}) %>   
                         </select>
                     </div>
                     <div class="input-container">
-                        <label for="description">Describí el producto</label>
-                        <textarea name="description" class="admin-form-input" id="" cols="25" rows="5"></textarea>
+                        <label for="description">Editá la descripción del producto</label>
+                        <textarea name="description" class="admin-form-input" id="" cols="25" rows="5"><%= product.description %></textarea>
                     </div>
                     <div>
                         <button type="submit" class="form-btn-submit">Editar</button>
                         <button type="reset" class="form-btn-submit">Reset</button>
                     </div>
                 </form>
-                <form action="">
+                <form action="/admin/product/delete/<%= product.id %>?_method=DELETE" id='form-destroy-product' method="POST">
                     <button type="submit" class="form-btn-submit">Eliminar</button>
                 </form>
+                </div>
             </div>
         </div>
     </div>

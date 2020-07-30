@@ -1219,11 +1219,24 @@ footer {
 
 .detail-figure {
     width: 30%;
-    margin: 0px;
 }
 
 .detail-figure img {
     width: 100%;
+}
+
+.detail-cont-forms {
+    height: 70%;
+    text-align: center;
+}
+
+#form-update-product {
+    height: 90%;
+}
+
+
+#form-destroy-product {
+    height: 20px;
 }
 
 /*** Media Querys ***/
@@ -1281,8 +1294,8 @@ footer {
 
 @media screen and (min-width: 380px) {
 
-    .admin-detail{
-        flex-direction: column;
+    #cont-detail{
+        flex-direction: row;
     }
 
 }

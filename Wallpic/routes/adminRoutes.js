@@ -24,6 +24,8 @@ router.get('/', adminController.main);
 router.post('/new', upload.any(), adminController.newProduct)
 router.get('/productlist', adminController.productList)
 router.get('/detailproduct/:id', adminController.productDetail)
+router.put('/product/update/:id', adminController.productUpdate)
+router.delete('/product/delete/:id', adminController.productDelete)
 
 router.post('/color', adminController.newColor)
 router.put('/color/update/:id', adminController.updateColor)
