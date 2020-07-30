@@ -1146,6 +1146,27 @@ footer {
     color: red;
 }
 
+.form-list-ul-all {
+    margin: 0px;
+    padding: 10px;
+}  
+
+.form-list-all {
+    cursor: pointer;
+    margin-bottom: 5px;
+    list-style: none;
+}
+
+.form-list-all a {
+    text-decoration: none;
+    color: black;
+    font-family: var(--primary-font);
+}
+
+.form-list-all:hover {
+    background-color: var(--intermediate-grey);
+}
+
 #form-destroy-category {
     display: none;
 }
@@ -1186,6 +1207,23 @@ footer {
 
 #admin-form-categories {
     display: none;
+}
+
+/* Vista detailProduct */
+
+.admin-detail {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.detail-figure {
+    width: 30%;
+    margin: 0px;
+}
+
+.detail-figure img {
+    width: 100%;
 }
 
 /*** Media Querys ***/
@@ -1238,6 +1276,14 @@ footer {
     }
 
     /**** Admin Styles ****/
+
+}
+
+@media screen and (min-width: 380px) {
+
+    .admin-detail{
+        flex-direction: column;
+    }
 
 }
 

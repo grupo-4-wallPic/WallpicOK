@@ -1,5 +1,6 @@
 const db = require('../database/models');
 const {Categories, Sizes, Colors, Products} = require('../database/models');
+const Category = require('../database/models/Category');
 const Op = db.Sequelize.Op
 
 
@@ -37,8 +38,21 @@ module.exports = {
             categoryId : req.body.category
         })
         .then(() => {
-            res.redirect('/admin')  
+            res.redirect('admin')  
           })
+    },
+
+    productDetail: (req, res) => {
+
+        let categories= Categories.findAll()
+        let product = Products.findByPk(req.params.id)
+        
+        Promise.all( [categories, product] )
+        .then(([categories, product]) => {
+
+        return res.render('detailProduct', { categories, product })
+    })
+
     },
 
     newColor: (req, res) => {
@@ -47,7 +61,7 @@ module.exports = {
             color: req.body.color
         })
         .then(() => {
-          res.redirect('/admin')  
+          res.redirect('admin')  
         })
          
        
@@ -63,7 +77,7 @@ module.exports = {
             }
         })
         .then(() => {
-            res.redirect('/admin')
+            res.redirect('admin')
         })
 
     },
@@ -76,7 +90,7 @@ module.exports = {
             }
         })
         .then(() => {
-            res.redirect('/admin')
+            res.redirect('admin')
         })
 
     },
@@ -87,25 +101,74 @@ module.exports = {
             price: req.body.price
         })
         .then(() => {
-            res.redirect('/admin')  
+            res.redirect('admin')  
           }) 
     },
 
-    updateSize: (req, res) => {},
+    updateSize: (req, res) => {
 
-    deleteSize: (req, res) => {},
+        Sizes.update({
+            size: req.body.size,
+            price: req.body.price
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(() => {
+            res.redirect('admin')
+        })
+
+    },
+
+    deleteSize: (req, res) => {
+
+        Sizes.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(() => {
+            res.redirect('admin')
+        })
+
+    },
     
     newCategory: (req, res) => {
         Categories.create({
             name: req.body.name
         })
         .then(() => {
-            res.redirect('/admin')  
+            res.redirect('admin')  
           }) 
     },
 
-    updateCategory: (req, res) => {},
+    updateCategory: (req, res) => {
 
-    deleteCategory: (req, res) => {},
+        Categories.update({
+            name: req.body.category
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(() => {
+            res.redirect('admin')
+        })
+
+    },
+
+    deleteCategory: (req, res) => {
+        // Agregar validación de que no existen productos con esta categoría
+        Categories.destroy({
+            where: {
+                id: req.params.id
+            }
+        })
+        .then(() => {
+            res.redirect('admin')
+        })
+
+    },
 
 }

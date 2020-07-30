@@ -68,9 +68,9 @@
                 <div class="form-cont-dblist">
                     <h3>Colores disponibles</h3>
                     <div class="form-dblist">
-                        <ul>  
+                        <ul class= "form-list-ul-all">  
                             <% colors.forEach( (color) => { %>
-                               <li class="form-list-color" id="<%= color.id %>"><%= color.color %></li>
+                               <li class="form-list-color form-list-all" id="<%= color.id %>"><%= color.color %></li>
                             <% }) %>
                         </ul>
                     </div>
@@ -102,9 +102,9 @@
                 <div class="form-cont-dblist">
                     <h3>Medidas disponibles</h3>
                     <div class="form-dblist">
-                        <ul>  
+                        <ul class= "form-list-ul-all">  
                             <% sizes.forEach( (size) => { %>
-                                <li class="form-list-size" id="<%= size.id %>"><span id="list-size"><%= size.size %></span> - $<span id="list-size-price"><%= size.price %></span></li>
+                                <li class="form-list-size form-list-all" id="<%= size.id %>"><span id="list-size"><%= size.size %></span> - $<span id="list-size-price"><%= size.price %></span></li>
                             <% }) %>
                         </ul>
                     </div>
@@ -145,9 +145,9 @@
                 <div class="form-cont-dblist">
                     <h3>Categorías disponibles</h3>
                     <div class="form-dblist">
-                        <ul>  
+                        <ul class="form-list-ul-all">  
                             <% categories.forEach( (category) => { %>
-                               <li class="form-list-categories" id="<%= category.id %>"><%= category.name %></li>
+                               <li class="form-list-categories form-list-all" id="<%= category.id %>"><%= category.name %></li>
                             <% }) %>
                         </ul>
                     </div>
@@ -163,7 +163,7 @@
                 <form action="" id="admin-category-form-update" method="POST">
                     <div class="input-container">
                         <label for="color">Editá el color</label>
-                        <input type="text" class="admin-form-input" name="color" id="category-form-input-update" value="">
+                        <input type="text" class="admin-form-input" name="category" id="category-form-input-update" value="">
                     </div>
                     <div>
                         <button type="submit" class="form-btn-submit">Editar</button>

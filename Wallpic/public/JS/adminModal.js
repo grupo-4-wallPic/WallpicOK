@@ -113,7 +113,7 @@ sizeList.forEach( (size) => {
         // Formulario destroy, valores y display
         
         destroySize.style.display= 'flex'
-        destroySize.attributes.action.value= `admin/color/delete/${idSize}?_method=DELETE`
+        destroySize.attributes.action.value= `admin/size/delete/${idSize}?_method=DELETE`
         // console.log(input)
     })
 })   

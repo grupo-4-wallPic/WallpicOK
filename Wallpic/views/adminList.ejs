@@ -12,15 +12,15 @@
     <%- include('./partials/header') %>
     <div class="admin-general-container">
     <div class="admin-top-buttons">
-        <a href="/admin/list"><button class="admin-top-btn admin-button">Pics</button></a>
+        <a href="/admin/productlist"><button class="admin-top-btn admin-button">Pics</button></a>
         <a href="/admin"><button class="admin-top-btn admin-button">Crear</button></a>
         <!-- <a href=""><button class="admin-top-btn admin-button">Editar</button></a> -->
     </div>
     <div class="admin-container">
         <div class="whole-list">
-            <ul>  
+            <ul class="form-list-ul-all">  
             <% products.forEach( (product) => { %>
-               <li><a href="/admin/list/<%= product.id %>"><%= product.name %></a></li>
+               <li class="form-list-all"><a href="/admin/detailproduct/<%= product.id %>"><%= product.name %> - <%= product.categoryId %> </a></li>
             <% }) %>
             </ul>
         </div>
