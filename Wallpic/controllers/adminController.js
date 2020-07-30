@@ -3,7 +3,7 @@ const {Categories, Sizes, Colors, Products} = require('../database/models');
 const Category = require('../database/models/Category');
 const Op = db.Sequelize.Op
 let fs = require('fs')
-
+let path = require('path')
 
 module.exports = {
 
@@ -74,12 +74,17 @@ module.exports = {
 
     productDelete: (req, res) => {
 
-        let product = Products.findByPk(req.params.id)
-        
-        fs.unlinkSync(`../public/images/products/${product.images}`, (err) => {
+        let pathPic = path.join(__dirname, '..', 'public', 'images', 'products')
+
+        Products.findByPk(req.params.id)
+        .then( (product) => {
+
+            fs.unlinkSync(`${pathPic}/${product.images}`, (err) => {
             if(err) throw err
-            console.log('file delected')
         })
+
+        } )
+        
 
         Products.destroy({
             where: {
