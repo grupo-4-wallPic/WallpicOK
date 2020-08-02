@@ -24,18 +24,16 @@ DROP TABLE IF EXISTS `cart`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `cart` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `product_id` int unsigned DEFAULT NULL,
-  `size_id` int unsigned DEFAULT NULL,
-  `color_id` int unsigned DEFAULT NULL,
   `user_id` int unsigned DEFAULT NULL,
+  `category` varchar(50) NOT NULL,
+  `title` varchar (50) NOT NULL,
+  `image` varchar (50) NOT NULL,
+  `color` varchar (50) NOT NULL,
+  `size` varchar (50) NOT NULL,
+  `price` int unsigned DEFAULT NULL,
+  `bought` tinyint unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `size_id` (`size_id`),
-  KEY `product_id` (`product_id`),
-  KEY `color_id` (`color_id`),
   KEY `user_id` (`user_id`),
-  CONSTRAINT `cart_ibfk_1` FOREIGN KEY (`size_id`) REFERENCES `size` (`id`),
-  CONSTRAINT `cart_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`),
-  CONSTRAINT `cart_ibfk_3` FOREIGN KEY (`color_id`) REFERENCES `color` (`id`),
   CONSTRAINT `cart_ibfk_4` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -161,6 +159,7 @@ CREATE TABLE `users` (
   `email` varchar(100) NOT NULL,
   `password` varchar(50) NOT NULL,
   `newsletter` tinyint NOT NULL,
+  `phoneNumber` varchar(50) NOT NULL,
   `createdAt` datetime DEFAULT CURRENT_TIMESTAMP,
   `updatedAt` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
   `deletedAt` datetime DEFAULT NULL,
@@ -175,6 +174,38 @@ CREATE TABLE `users` (
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `address`
+--
+
+DROP TABLE IF EXISTS `address`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `address` (
+  `id` int unsigned NOT NULL AUTO_INCREMENT,
+  `street` varchar(50) NOT NULL,
+  `number` int unsigned NULL,
+  `floor` int unsigned NULL,
+  `apartment` varchar (50) NOT NULL,
+  `place` varchar (50) NOT NULL,
+  `province` varchar (50) NOT NULL,
+  `zipCode` int unsigned DEFAULT NULL,
+  `user_id` int unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `address_ibfk_4` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `address`
+--
+
+LOCK TABLES `address` WRITE;
+/*!40000 ALTER TABLE `address` DISABLE KEYS */;
+/*!40000 ALTER TABLE `address` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
