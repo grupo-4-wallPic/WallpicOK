@@ -10,9 +10,9 @@ module.exports = (sequelize, DataTypes) => {
     
 },{tableName: "CATEGORIES", timestamps: false
 });
-    // Category.associate = function(models){
-    //     Category.hasMany(models.Product, {foreignKey: 'categoryId', as: 'category'}) 
-    // }
+    Category.associate = function(models){
+        Category.hasMany(models.Products, {foreignKey: 'categoryId', as: 'product'}) 
+    }
 
 return Category;
 }
