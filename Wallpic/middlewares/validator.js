@@ -1,7 +1,10 @@
 const {check, body} = require('express-validator');
 const json = require('../custom-module/custom-json')
-const users = json('users')
+// const users = json('users')
 const bcryptjs = require ('bcryptjs')
+const db = require('../database/models');
+const {Users} = require('../database/models');
+const Op = db.Sequelize.Op
 
 module.exports = {
 
@@ -19,11 +22,17 @@ module.exports = {
         .withMessage('Debe ingresar un correo electrónico').bail()
         .isEmail()
         .withMessage('Debe ingresar un email válido')
-        .custom ((value) => {
-            const user = users.findBySomething((user) => user.email === value);
-            return !user})
+        .custom (( value, req) => {
+          const user = Users.findOne({
+            where: { email: req.body.email } });
+          if (user){
+            return !user}
+          }) 
+            // const user = users.findBySomething((user) => user.email === value);
+            // return !user})
         .withMessage ('Usuario ya registrado'),
-
+        
+      
         check('password')
         .notEmpty()
         .withMessage('Campo obligatorio')
@@ -38,14 +47,16 @@ module.exports = {
         .withMessage("Las contraseñas deben coincidir"),
         
     ],
+
     login: [
         body("email")
           .notEmpty()
           .withMessage("Campo obligatorio")
           .bail()
           .custom((value, { req }) => {
-            const user = users.findBySomething((user) => user.email == value);
-    
+            const user = Users.findOne({
+              where: { email: req.body.email } });
+            // users.findBySomething((user) => user.email == value);
             if (user) {
               return bcryptjs.compareSync(req.body.password, user.password);
             } else {
