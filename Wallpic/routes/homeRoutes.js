@@ -16,6 +16,7 @@ router.get ('/GrandesClientes', homeController.GrandesClientes);
 router.get ('/contacto', homeController.contacto);
 router.get ('/FAQ', homeController.faq);
 router.get ('/inicio', homeController.inicio);
-
+router.get('/mostsale', homeController.mostsale);
+// router.get ('/mostSale', homeController.mostSale);
 
 module.exports = router;

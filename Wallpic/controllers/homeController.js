@@ -29,5 +29,8 @@ const homecontroller = {
     inicio: (req, res) =>{
         res.render ('/')
     },
+    mostsale: (req, res) =>{
+        res.render ('mostsale')
+    },
 };
     module.exports = homecontroller;
