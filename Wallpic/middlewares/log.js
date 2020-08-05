@@ -10,8 +10,8 @@ module.exports = (req, res, next) => {
     return next();
   } else if(req.cookies.email) {
     // Buscamos al usuario
-    let user = users.findBySomething(user => user.email == req.cookies.email);
-
+    Users.findOne({ where: { email: req.body.email } })
+    .then(function(user){ 
 
     // LO LOGUEO
 
@@ -26,7 +26,7 @@ module.exports = (req, res, next) => {
 
     // Continuamos
     return next();
-  } else {
+  })} else {
     return next();
   }
 }

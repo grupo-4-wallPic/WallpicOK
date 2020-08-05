@@ -16,12 +16,12 @@
         </form>
          <!-- Menu -->
         <nav class="menu">
-            <ul>
-                <li><a href="/category/animales">Vista categoría</a></li>
-                <li><a href="/products">Vista producto</a></li>
-                <!-- <li><a href="">UnLink</a></li> -->
-                <!-- <li><a href="">UnLink</a></li> -->
-                <!-- <li><a href="">UnLink</a></li> -->
+            <ul class="initialbar">
+                <li><a href="/category/animales">Categorías</a></li>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/faq">FAQ</a></li>
+                <li><a href="/nosotros">Nosotros</a></li>
+                <li><a href="/GrandesClientes">Grandes Clientes</a></li>
             </ul>
         </nav>
     </div>
@@ -34,7 +34,7 @@
         <% if (locals.user) { %>
             <form action="/logout" method="POST">
                 <div class="logdata">
-                <a class="logname" id="logname" href= #>Hola, <%= locals.user.name %>! </a>
+                <a class="logname" id="logname" href="/user" >Hola, <%= locals.user.name %>! </a>
                 <button class="logout" id="cerrar" type="submit">Cerrar sesión
                 </button>
             </div>
@@ -54,6 +54,7 @@
         </div>
     </div>
 </header>
+<div class="fixheader"></div>
 </div>
 <%- include('./menu-mobile') %> 
 
