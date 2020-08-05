@@ -32,7 +32,7 @@ const registerController = {
             last_name: req.body.lastname,
             email: req.body.email,
             password: passCrypt,
-            newsletter: 1,
+            newsletter:req.body.checkbox,
 
         })
         .then(() => {

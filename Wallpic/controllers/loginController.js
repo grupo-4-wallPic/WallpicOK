@@ -18,11 +18,9 @@ module.exports = {
         let errors = validationResult(req);
 
         if (errors.isEmpty()) {
-            let user = Users.findOne({
-              where: { email: req.body.email } });
-            
+            Users.findOne({ where: { email: req.body.email } })
+            .then(function(user){ 
             // users.findBySomething(user => user.email == req.body.email);
-
       delete user.password;
 
       req.session.user = user; // YA ESTÁ EN SESION
@@ -34,6 +32,7 @@ module.exports = {
 
       }
         return res.redirect('/');
+      });
         } else {
         return res.render('loginView', {errors: errors.mapped(), old:req.body});
         }   

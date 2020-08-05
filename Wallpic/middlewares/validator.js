@@ -22,17 +22,18 @@ module.exports = {
         .withMessage('Debe ingresar un correo electrónico').bail()
         .isEmail()
         .withMessage('Debe ingresar un email válido')
-        .custom (( value, req) => {
-          const user = Users.findOne({
-            where: { email: req.body.email } });
+        .custom (( value,{req}) => {
+          return db.Users.findOne({ where: { email: value } })
+          .then(function(user){
           if (user){
-            return !user}
-          }) 
+            return Promise.reject ('Usuario ya registrado')}
+          })
+        }), 
             // const user = users.findBySomething((user) => user.email === value);
-            // return !user})
-        .withMessage ('Usuario ya registrado'),
+          // return !user})
+        // .withMessage ('Usuario ya registrado'),
         
-      
+    
         check('password')
         .notEmpty()
         .withMessage('Campo obligatorio')
@@ -53,17 +54,21 @@ module.exports = {
           .notEmpty()
           .withMessage("Campo obligatorio")
           .bail()
-          .custom((value, { req }) => {
-            const user = Users.findOne({
-              where: { email: req.body.email } });
+          .custom((value, { req }) => { 
+            return db.Users.findOne({ where: { email: value } })
+            .then(function(user){
             // users.findBySomething((user) => user.email == value);
             if (user) {
-              return bcryptjs.compareSync(req.body.password, user.password);
-            } else {
-              return false;
+              if (!bcryptjs.compareSync(req.body.password, user.password)){
+                return Promise.reject ('Usuario o Contraseña Invalidos')}
+               
             }
+            else {
+              return Promise.reject ('Usuario o Contraseña Invalidos')
+            } 
           })
-          .withMessage("Email o contraseña inválidos"),
+        }),
+          // .withMessage("Email o contraseña inválidos"),
         body("password").notEmpty().withMessage("Campo obligatorio"),
       ],
 
