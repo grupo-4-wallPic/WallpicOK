@@ -5,6 +5,9 @@ const path = require ('path');
 const {validationResult} = require('express-validator')
 const json = require ('../custom-module/custom-json')
 const users = json('users')
+const db = require('../database/models');
+const {Users} = require('../database/models');
+const Op = db.Sequelize.Op
 
 module.exports = {
     index: (req, res) => {
@@ -15,8 +18,9 @@ module.exports = {
         let errors = validationResult(req);
 
         if (errors.isEmpty()) {
-            let user = users.findBySomething(user => user.email == req.body.email);
-
+            Users.findOne({ where: { email: req.body.email } })
+            .then(function(user){ 
+            // users.findBySomething(user => user.email == req.body.email);
       delete user.password;
 
       req.session.user = user; // YA ESTÁ EN SESION
@@ -28,6 +32,7 @@ module.exports = {
 
       }
         return res.redirect('/');
+      });
         } else {
         return res.render('loginView', {errors: errors.mapped(), old:req.body});
         }   

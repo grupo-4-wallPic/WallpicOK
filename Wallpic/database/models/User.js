@@ -20,7 +20,7 @@ createdAt: DataTypes.DATE,
 
 updatedAt: DataTypes.DATE,
 
-deleteAt: DataTypes.DATE,
+deletedAt: DataTypes.DATE,
 
 },{tableName: "USERS"});
 

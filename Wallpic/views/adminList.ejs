@@ -20,7 +20,7 @@
         <div class="whole-list">
             <ul class="form-list-ul-all">  
             <% products.forEach( (product) => { %>
-               <li class="form-list-all"><a href="/admin/detailproduct/<%= product.id %>"><%= product.name %> - <%= product.categoryId %> </a></li>
+               <li class="form-list-all"><a href="/admin/detailproduct/<%= product.id %>"><%= product.name %> - <%= product.category.name %> </a></li>
             <% }) %>
             </ul>
         </div>

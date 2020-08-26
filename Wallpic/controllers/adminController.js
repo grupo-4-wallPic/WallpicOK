@@ -1,6 +1,5 @@
 const db = require('../database/models');
 const {Categories, Sizes, Colors, Products} = require('../database/models');
-const Category = require('../database/models/Category');
 const Op = db.Sequelize.Op
 let fs = require('fs')
 let path = require('path')
@@ -23,7 +22,12 @@ module.exports = {
     },
 
     productList: (req, res) => {
-        Products.findAll()
+        Products.findAll( {
+            include: [{association: "category"}],
+            order: [
+                ['categoryId']
+            ]
+        } )
         .then((products) => {
            return res.render('adminList', {products}) 
         })
