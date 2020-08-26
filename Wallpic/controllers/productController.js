@@ -16,18 +16,25 @@ module.exports = {
        //.catch (function (e) {})
     },
     item: (req, res) => {
-       Products.findByPk ( req.params.id )
-       .then((product) => {
-        let related = Products.findAll({
-            where: {
-                categoryId: product.categoryId
-            }
-        })
         let sizes = Sizes.findAll()
         let colors = Colors.findAll()
-        Promise.all ([sizes, colors, related])
-       }) 
-       .then(([sizes, colors, related]) => {return res.render('product', {product, sizes, colors, related})})
-       //.catch (function (e) {})
+       let product = Products.findByPk ( req.params.id )
+       let related = Products.findByPk (req.params.id)
+    //    .then (({
+
+    //    }))
+
+       
+        // let related = Products.findAll({
+        //     where: {
+        //         categoryId: product.categoryId
+        //     }
+        // })
+        
+        Promise.all ([sizes, colors,product])
+
+
+       .then(([sizes, colors, product]) => {res.render('product', {product, sizes, colors})})
+    //    //.catch (function (e) {})
     }
 }

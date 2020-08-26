@@ -27,19 +27,19 @@
                 </figure>
                 <figure>
                     <a href="#">
-                    <img src="/Images/products/<%=products.images %> " alt=""> 
+                    <img src="/Images/products/<%=product.images %> " alt=""> 
                     </a>
                 </figure>
             </div>
             <div class='img-principal'>
                 <figure>
-                    <img src="/Images/products/<%=products.images %> " alt="">
+                    <img src="/Images/products/<%=product.images %> " alt="">
                 </figure>
             </div>
             <div class='seleccion'>
             <div class='product-txt'>
-                <p><%= products.name %> </p>
-                <h2>$<%= products.price %> </h2>
+                <p><%= product.name %> </p>
+                <h2>$<%= product.price %> </h2>
                 <p>Medios de pago</p>
             </div>
             <div class='tarjetas'>
@@ -52,9 +52,9 @@
                     <li><a href="#">Marco </a>
                         <div class='sub-menu-1'>
                             <ul>
-                                <li class="active"><a href="#"><%= products.frameColor %></a></li>
-                                <li class="active"><a href="#"><%= products.frameColor %></a></li>
-                                <li class="active"><a href="#"><%= products.frameColor %></a></li>
+                                <li class="active"><a href="#"><%= product.frameColor %></a></li>
+                                <li class="active"><a href="#"><%= product.frameColor %></a></li>
+                                <li class="active"><a href="#"><%= product.frameColor %></a></li>
                             </ul>
                         </div>
                     </li>
@@ -90,7 +90,7 @@
         <div class='descripcion-contenedor'>
         <section class='descripcion'>
             <h2 class='descripcion-header'>Sobre este producto</h2>
-            <article class='about'> <%= products.description %> </article>
+            <article class='about'> <%= product.description %> </article>
             <h2 class='descripcion-footer'> <br> </h2>
         </section>
         </div>
@@ -107,21 +107,21 @@
             <div class='contenedor-related'>
                 <section class="prod-related">
                     <figure class='img-related-1'>
-                        <img src="<%= products.image %> " alt="">
+                        <img src="<%= product.image %> " alt="">
                     </figure>
                     <figure class='img-related-2'>
-                        <img src="<%= products.image %>" alt="">
+                        <img src="<%= product.image %>" alt="">
                     </figure>
                 </section>
                 <section class='txt-related'>
                     <article class='txt-related-1'>
-                        <p><%= products.name %> </p>
-                        <h2>$ <%= products.price %> </h2>
+                        <p><%= product.name %> </p>
+                        <h2>$ <%= product.price %> </h2>
                         <button class='add-to-cart'>Agregar al carrito</button>
                     </article>
                     <article class='txt-related-2'>
-                        <p><%= products.name %> </p>
-                        <h2>$ <%= products.price %> </h2>
+                        <p><%= product.name %> </p>
+                        <h2>$ <%= product.price %> </h2>
                         <button class='add-to-cart'>Agregar al carrito</button>
                     </article>
                 </section>
