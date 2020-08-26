@@ -4,14 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link
-    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto:wght@400;700&display=swap"
-    rel="stylesheet">
-   <!-- font-awesome -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-   <!-- Normalize -->
-   <link rel="stylesheet" href="./css/normalize.css">
-   <link rel="stylesheet" href="./css/styles.css">
+    <%- include('./partials/head') %> 
 </head>
 <body>
     <div>
@@ -24,29 +17,29 @@
             <div class='img-extra'>
                 <figure>
                     <a href="#">
-                    <img src="<%= product.images %> " alt=""> 
+                   <img src="/Images/products/<%=product.images %> " alt=""> 
                     </a>
                 </figure>
                 <figure>
                     <a href="#">
-                    <img src="<%= product.images %> " alt=""> 
+                    <img src="/Images/products/<%=product.images %> " alt=""> 
                     </a>
                 </figure>
                 <figure>
                     <a href="#">
-                    <img src="<%= product.images %> " alt=""> 
+                    <img src="/Images/products/<%=products.images %> " alt=""> 
                     </a>
                 </figure>
             </div>
             <div class='img-principal'>
                 <figure>
-                    <img src="<%= product.images %>" alt="">
+                    <img src="/Images/products/<%=products.images %> " alt="">
                 </figure>
             </div>
             <div class='seleccion'>
             <div class='product-txt'>
-                <p><%= product.name %> </p>
-                <h2>$<%= product.price %> </h2>
+                <p><%= products.name %> </p>
+                <h2>$<%= products.price %> </h2>
                 <p>Medios de pago</p>
             </div>
             <div class='tarjetas'>
@@ -59,21 +52,21 @@
                     <li><a href="#">Marco </a>
                         <div class='sub-menu-1'>
                             <ul>
-                                <li class="active"><a href="#"><%= product.frameColor %></a></li>
-                                <li class="active"><a href="#"><%= product.frameColor %></a></li>
-                                <li class="active"><a href="#"><%= product.frameColor %></a></li>
+                                <li class="active"><a href="#"><%= products.frameColor %></a></li>
+                                <li class="active"><a href="#"><%= products.frameColor %></a></li>
+                                <li class="active"><a href="#"><%= products.frameColor %></a></li>
                             </ul>
                         </div>
                     </li>
                     <li><a href="#">Tamaño</a>
                         <div class='sub-menu-2'>
                             <ul>
-                                <li class="active"><a href="#"><%= size.size %></a></li>
-                                <li class="active"><a href="#"><%= size.size %></a></li>
-                                <li class="active"><a href="#"><%= size.size %></a></li>
-                                <li class="active"><a href="#"><%= size.size %></a></li>
-                                <li class="active"><a href="#"><%= size.size %></a></li>
-                                <li class="active"><a href="#"><%= size.size %></a></li>
+                                <li class="active"><a href="#"><%= sizes.size %></a></li>
+                                <li class="active"><a href="#"><%= sizes.size %></a></li>
+                                <li class="active"><a href="#"><%= sizes.size %></a></li>
+                                <li class="active"><a href="#"><%= sizes.size %></a></li>
+                                <li class="active"><a href="#"><%= sizes.size %></a></li>
+                                <li class="active"><a href="#"><%= sizes.size %></a></li>
                             </ul>
                         </div>
                     </li>
@@ -97,7 +90,7 @@
         <div class='descripcion-contenedor'>
         <section class='descripcion'>
             <h2 class='descripcion-header'>Sobre este producto</h2>
-            <article class='about'> <%= product.description %> </article>
+            <article class='about'> <%= products.description %> </article>
             <h2 class='descripcion-footer'> <br> </h2>
         </section>
         </div>
@@ -108,26 +101,27 @@
         <br>
         <br>
         <br>
+
         <section class='related'>
             <h2 class='descripcion-header'>Productos relacionados</h2>
             <div class='contenedor-related'>
                 <section class="prod-related">
                     <figure class='img-related-1'>
-                        <img src="<%= product.image %> " alt="">
+                        <img src="<%= products.image %> " alt="">
                     </figure>
                     <figure class='img-related-2'>
-                        <img src="<%= product.image %>" alt="">
+                        <img src="<%= products.image %>" alt="">
                     </figure>
                 </section>
                 <section class='txt-related'>
                     <article class='txt-related-1'>
-                        <p><%= product.name %> </p>
-                        <h2>$ <%= product.price %> </h2>
+                        <p><%= products.name %> </p>
+                        <h2>$ <%= products.price %> </h2>
                         <button class='add-to-cart'>Agregar al carrito</button>
                     </article>
                     <article class='txt-related-2'>
-                        <p><%= product.name %> </p>
-                        <h2>$ <%= product.price %> </h2>
+                        <p><%= products.name %> </p>
+                        <h2>$ <%= products.price %> </h2>
                         <button class='add-to-cart'>Agregar al carrito</button>
                     </article>
                 </section>
