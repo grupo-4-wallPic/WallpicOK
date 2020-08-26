@@ -31,12 +31,16 @@ CREATE TABLE `cart` (
   `color` varchar (50) NOT NULL,
   `size` varchar (50) NOT NULL,
   `price` int unsigned DEFAULT NULL,
-  `bought` tinyint unsigned DEFAULT NULL,
+  `state` tinyint unsigned DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `cart_ibfk_4` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+ALTER TABLE cart
+ADD purchase_id INT unsigned NULL,
+ADD FOREIGN KEY (purchase_id) REFERENCES purchase(id)
 
 --
 -- Dumping data for table `cart`
@@ -206,6 +210,36 @@ CREATE TABLE `address` (
 LOCK TABLES `address` WRITE;
 /*!40000 ALTER TABLE `address` DISABLE KEYS */;
 /*!40000 ALTER TABLE `address` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `purchase`
+--
+
+DROP TABLE IF EXISTS `purchase`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `wallpic`.`purchase` (
+  `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  `order_number` INT UNSIGNED NULL,
+  `total` INT UNSIGNED NULL,
+  `user_id` INT UNSIGNED NULL,
+  PRIMARY KEY (`id`),
+  INDEX `id_idx` (`user_id` ASC),
+  CONSTRAINT `id`
+    FOREIGN KEY (`user_id`)
+    REFERENCES `wallpic`.`users` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `purchase`
+--
+
+LOCK TABLES `cart` WRITE;
+/*!40000 ALTER TABLE `cart` DISABLE KEYS */;
+/*!40000 ALTER TABLE `cart` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --

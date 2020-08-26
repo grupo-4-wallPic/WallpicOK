@@ -10,8 +10,6 @@ module.exports = (sequelize, DataTypes) => {
     
     title: DataTypes.STRING,
     
-    title: DataTypes.STRING,
-    
     image: DataTypes.STRING,
     
     color: DataTypes.STRING,
@@ -20,7 +18,9 @@ module.exports = (sequelize, DataTypes) => {
     
     price: DataTypes.INTEGER,
 
-    bought: DataTypes.INTEGER,
+    state: DataTypes.INTEGER,
+
+    purchase_id: DataTypes.INTEGER
 
     
     },{tableName: "CART"});

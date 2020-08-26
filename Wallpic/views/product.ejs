@@ -24,29 +24,29 @@
             <div class='img-extra'>
                 <figure>
                     <a href="#">
-                    <img src="<%= unProducto.image %> " alt=""> 
+                    <img src="<%= product.images %> " alt=""> 
                     </a>
                 </figure>
                 <figure>
                     <a href="#">
-                    <img src="<%= unProducto.image %> " alt=""> 
+                    <img src="<%= product.images %> " alt=""> 
                     </a>
                 </figure>
                 <figure>
                     <a href="#">
-                    <img src="<%= unProducto.image %> " alt=""> 
+                    <img src="<%= product.images %> " alt=""> 
                     </a>
                 </figure>
             </div>
             <div class='img-principal'>
                 <figure>
-                    <img src="<%= unProducto.image %>" alt="">
+                    <img src="<%= product.images %>" alt="">
                 </figure>
             </div>
             <div class='seleccion'>
             <div class='product-txt'>
-                <p><%= unProducto.name %> </p>
-                <h2>$<%= unProducto.price[0] %> </h2>
+                <p><%= product.name %> </p>
+                <h2>$<%= product.price %> </h2>
                 <p>Medios de pago</p>
             </div>
             <div class='tarjetas'>
@@ -59,21 +59,21 @@
                     <li><a href="#">Marco </a>
                         <div class='sub-menu-1'>
                             <ul>
-                                <li class="active"><a href="#"><%= unProducto.frameColor[0] %></a></li>
-                                <li class="active"><a href="#"><%= unProducto.frameColor[1] %></a></li>
-                                <li class="active"><a href="#"><%= unProducto.frameColor[2] %></a></li>
+                                <li class="active"><a href="#"><%= product.frameColor %></a></li>
+                                <li class="active"><a href="#"><%= product.frameColor %></a></li>
+                                <li class="active"><a href="#"><%= product.frameColor %></a></li>
                             </ul>
                         </div>
                     </li>
                     <li><a href="#">Tamaño</a>
                         <div class='sub-menu-2'>
                             <ul>
-                                <li class="active"><a href="#"><%= unProducto.medidas[0] %></a></li>
-                                <li class="active"><a href="#"><%= unProducto.medidas[1] %></a></li>
-                                <li class="active"><a href="#"><%= unProducto.medidas[2] %></a></li>
-                                <li class="active"><a href="#"><%= unProducto.medidas[3] %></a></li>
-                                <li class="active"><a href="#"><%= unProducto.medidas[4] %></a></li>
-                                <li class="active"><a href="#"><%= unProducto.medidas[5] %></a></li>
+                                <li class="active"><a href="#"><%= size.size %></a></li>
+                                <li class="active"><a href="#"><%= size.size %></a></li>
+                                <li class="active"><a href="#"><%= size.size %></a></li>
+                                <li class="active"><a href="#"><%= size.size %></a></li>
+                                <li class="active"><a href="#"><%= size.size %></a></li>
+                                <li class="active"><a href="#"><%= size.size %></a></li>
                             </ul>
                         </div>
                     </li>
@@ -90,15 +90,17 @@
                     </li>
                 </ul>
             </div>
-            <button class='add-to-cart'>Agregar al carrito</button>
+            <button class='add-to-cart-main'>Agregar al carrito</button>
             </div>
         </article>
         </section>
+        <div class='descripcion-contenedor'>
         <section class='descripcion'>
             <h2 class='descripcion-header'>Sobre este producto</h2>
-            <article class='about'> <%= unProducto.description %> </article>
+            <article class='about'> <%= product.description %> </article>
             <h2 class='descripcion-footer'> <br> </h2>
         </section>
+        </div>
         <br>
         <br>
         <br>
@@ -108,48 +110,40 @@
         <br>
         <section class='related'>
             <h2 class='descripcion-header'>Productos relacionados</h2>
-            <div>
+            <div class='contenedor-related'>
                 <section class="prod-related">
                     <figure class='img-related-1'>
-                        <img src="<%= unProducto.image %> " alt="">
+                        <img src="<%= product.image %> " alt="">
                     </figure>
                     <figure class='img-related-2'>
-                        <img src="<%= unProducto.image %>" alt="">
-                    </figure>
-                    <figure class='img-related-3'>
-                        <img src="<%= unProducto.image %>" alt="">
+                        <img src="<%= product.image %>" alt="">
                     </figure>
                 </section>
                 <section class='txt-related'>
                     <article class='txt-related-1'>
-                        <p><%= unProducto.name %> </p>
-                        <h2>$ <%= unProducto.price[0] %> </h2>
+                        <p><%= product.name %> </p>
+                        <h2>$ <%= product.price %> </h2>
                         <button class='add-to-cart'>Agregar al carrito</button>
                     </article>
                     <article class='txt-related-2'>
-                        <p><%= unProducto.name %> </p>
-                        <h2>$ <%= unProducto.price[0] %> </h2>
-                        <button class='add-to-cart'>Agregar al carrito</button>
-                    </article>
-                    <article class='txt-related-3'>
-                        <p><%= unProducto.name %> </p>
-                        <h2>$ <%= unProducto.price[0] %> </h2>
+                        <p><%= product.name %> </p>
+                        <h2>$ <%= product.price %> </h2>
                         <button class='add-to-cart'>Agregar al carrito</button>
                     </article>
                 </section>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
             </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
         </section>
 
 
