@@ -261,7 +261,7 @@ header {
     width: 100%;
 }
 .fixheader{
-    height: 83px;
+    height: 100px;
     width: 100%;
 }
 
@@ -1263,6 +1263,7 @@ footer {
     background: white;
     border: 1px solid var(--strong-grey);
     width: 110px;
+    cursor: pointer;
 }
 
 .admin-top-buttons {
@@ -1321,6 +1322,13 @@ footer {
 .form-list-all:hover {
     background-color: var(--intermediate-grey);
 }
+
+.adminErrors {
+    color: red;
+    text-align: center;
+    padding: 10px;
+}
+
 
 #form-destroy-category {
     display: none;
