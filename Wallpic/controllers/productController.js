@@ -30,8 +30,11 @@ module.exports = {
        })
        .then( ( [sizes, colors, product, related] ) => {
            return res.render('product', {sizes, colors, product, related});
-       } )
+       })
        
+    //    if (checkSize.checked) {
+           
+    //    }
     }
 }
 

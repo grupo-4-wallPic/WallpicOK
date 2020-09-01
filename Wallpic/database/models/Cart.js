@@ -1,12 +1,12 @@
 module.exports = (sequelize, DataTypes) => {
 
-    const Cart = sequelize.define ("Cart",{
+    const Cart = sequelize.define ("Carts",{
     id: {
             type: DataTypes.INTEGER,
             primaryKey: true
         },
-    
-    category: DataTypes.STRING,
+
+    user_id: DataTypes.INTEGER,
     
     title: DataTypes.STRING,
     
@@ -16,11 +16,19 @@ module.exports = (sequelize, DataTypes) => {
     
     size: DataTypes.STRING,
     
-    price: DataTypes.INTEGER,
+    price: DataTypes.DECIMAL(6, 2),
 
     state: DataTypes.INTEGER,
 
-    purchase_id: DataTypes.INTEGER
+    purchase_id: DataTypes.INTEGER,
+
+    quantity: DataTypes.STRING,
+
+    createdAt: DataTypes.DATE,
+
+    updatedAt: DataTypes.DATE,
+
+    deletedAt: DataTypes.DATE,
 
     
     },{tableName: "CART"});
