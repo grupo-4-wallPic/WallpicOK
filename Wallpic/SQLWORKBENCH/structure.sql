@@ -25,13 +25,13 @@ DROP TABLE IF EXISTS `cart`;
 CREATE TABLE `cart` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `user_id` int unsigned DEFAULT NULL,
-  `category` varchar(50) NOT NULL,
   `title` varchar (50) NOT NULL,
   `image` varchar (50) NOT NULL,
   `color` varchar (50) NOT NULL,
   `size` varchar (50) NOT NULL,
   `price` int unsigned DEFAULT NULL,
   `state` tinyint unsigned DEFAULT NULL,
+  `quantity` varchar (50) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   CONSTRAINT `cart_ibfk_4` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`)
