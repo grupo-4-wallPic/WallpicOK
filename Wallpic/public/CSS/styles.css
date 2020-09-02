@@ -386,7 +386,7 @@ header {
     width: 100%;
 }
 .fixheader{
-    height: 83px;
+    height: 100px;
     width: 100%;
 }
 
@@ -830,7 +830,7 @@ header {
     align-items: center;
     flex-direction: column;
     position: fixed;
-    z-index: 10;
+    z-index: 101;
     top: 0px;
     max-width: 400px;
     max-height: 700px;
@@ -1049,19 +1049,11 @@ header {
     display: none;
 }
 
-.img-related-3 {
-    display: none;
-}
-
 .txt-related-1 {
     text-align: center;
 }
 
 .txt-related-2 {
-    display: none;
-}
-
-.txt-related-3 {
     display: none;
 }
 
@@ -1073,80 +1065,81 @@ header {
     width: 100px;
 }
 
-.seleccion {
-    width: fit-content;
-    text-align: center;
-}
-
 .product-info {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
 }
 
-.dropdowns ul li:hover .sub-menu-1{
-    display: block;
-    position: relative;
-    margin-top: 15px;
-    margin-left: 15px;
-    text-align: left;
+.contenedor-flex{
+    display: flex;
+    flex-direction: column;
 }
 
-.dropdowns ul li:hover .sub-menu-1 ul {
-    display: block;
-    margin: 10px;
+.seleccion{
+    display: flex;
+    flex-direction: column;
 }
 
-.sub-menu-1 {
-    display: none;
-}
-
-.dropdowns ul li:hover .sub-menu-2{
-    display: block;
-    position: relative;
-    margin-top: 15px;
-    margin-left: 15px;
-    text-align: left;
-}
-
-.dropdowns ul li:hover .sub-menu-2 ul {
-    display: block;
-    margin: 10px;
-}
-
-.sub-menu-2 {
-    display: none;
-}
-
-.dropdowns ul li:hover .sub-menu-3{
-    display: block;
-    position: relative;
-    margin-top: 15px;
-    margin-left: 15px;
-    text-align: left;
-}
-
-.dropdowns ul li:hover .sub-menu-3 ul {
-    display: block;
-    margin: 10px;
-}
-
-.sub-menu-3 {
-    display: none;
-}
-
-.dropdowns {
+.tarjetas {
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
 
-.dropdowns ul li a{ 
+.dropdowns{
+    display: flex;
+    flex-direction: column;
+    padding-left: 0px;
+}
+
+.dropdowns li{
+    list-style: none;
+}
+
+.color-li a{
     text-decoration: none;
     color: black;
 }
 
-.dropdowns ul{
-    list-style: none;
-    padding-left: 0;
+/* .sub-menu-1{
+    display: none;
+} */
+
+.color-li a:hover + .sub-menu-1 {
+    display: block;
+    position: relative;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.size-li a{
+    text-decoration: none;
+    color: black;
+}
+
+/* .sub-menu-2{
+    display: none;
+} */
+
+.size-li a:hover + .sub-menu-2 {
+    display: block;
+    position: relative;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.quantity{
+    width: 30%;
+}
+
+.add-to-cart-main {
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    font-family: var(--secundary-font);
+    width: 80%;
+    font-size: x-small;
 }
 
 /* Registro aparte */
@@ -1343,6 +1336,7 @@ footer {
     background: white;
     border: 1px solid var(--strong-grey);
     width: 110px;
+    cursor: pointer;
 }
 
 .admin-top-buttons {
@@ -1401,6 +1395,13 @@ footer {
 .form-list-all:hover {
     background-color: var(--intermediate-grey);
 }
+
+.adminErrors {
+    color: red;
+    text-align: center;
+    padding: 10px;
+}
+
 
 #form-destroy-category {
     display: none;
@@ -1815,13 +1816,6 @@ footer {
         font-family: var(--secundary-font);
     }
     
-    .seleccion{
-        display: block;
-        text-align: center;
-        padding-top: 90px;
-        text-transform: uppercase;
-    }
-    
      .add-to-cart{
          background-color: black;
          color: white;
@@ -1854,10 +1848,6 @@ footer {
      .img-related-2{
         display: flex;
     }
-
-    .img-related-3{
-        display: flex;
-    }
     
     .txt-related {
         display: flex;
@@ -1886,80 +1876,29 @@ footer {
         padding-left: 71px;
     }
 
-    .txt-related-3 {
+    .add-to-cart-main {
+        background-color: black;
+        color: white;
+        border-radius: 15px;
+        font-family: var(--secundary-font);
+        width: 47%;
+        font-size: small;
+    }
+
+    .tarjetas {
+        text-align: left;
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-        text-align: center;
-        flex-direction: column;
-        width: fit-content;
-        padding-left: 80px;
+        flex-direction: row;
     }
 
-    .dropdowns ul li:hover .sub-menu-1{
-        display: block;
-        position: relative;
-        margin-top: 15px;
-        margin-left: 15px;
-        text-align: left;
-    }
-    
-    .dropdowns ul li:hover .sub-menu-1 ul {
-        display: block;
-        margin: 10px;
+    .tarjetas i{
+        padding-left: 5%;
     }
 
-    .sub-menu-1 {
-        display: none;
+    .quantity{
+        width: 10%;
     }
 
-    .dropdowns ul li:hover .sub-menu-2{
-        display: block;
-        position: relative;
-        margin-top: 15px;
-        margin-left: 15px;
-        text-align: left;
-    }
-    
-    .dropdowns ul li:hover .sub-menu-2 ul {
-        display: block;
-        margin: 10px;
-    }
-
-    .sub-menu-2 {
-        display: none;
-    }
-
-    .dropdowns ul li:hover .sub-menu-3{
-        display: block;
-        position: relative;
-        margin-top: 15px;
-        margin-left: 15px;
-        text-align: left;
-    }
-    
-    .dropdowns ul li:hover .sub-menu-3 ul {
-        display: block;
-        margin: 10px;
-    }
-
-    .sub-menu-3 {
-        display: none;
-    }
-
-    .dropdowns {
-        text-align: center;
-    }
-
-    .dropdowns ul li a{ 
-        text-decoration: none;
-        color: black;
-    }
-
-    .dropdowns ul{
-        list-style: none;
-        padding-left: 0;
-    }
     .carrousel-container{
         flex-direction: row;
         }
@@ -2106,13 +2045,6 @@ footer {
     font-family: var(--secundary-font);
 }
 
-.seleccion{
-    display: block;
-    text-align: center;
-    padding-top: 90px;
-    text-transform: uppercase;
-}
-
  .add-to-cart-main {
      background-color: black;
      color: white;
@@ -2120,6 +2052,8 @@ footer {
      padding-bottom: 7px;
      padding-top: 7px;
      font-family: var(--secundary-font);
+     font-size: small;
+     width: 30%;
  }
 
  .add-to-cart {
@@ -2191,85 +2125,31 @@ footer {
     font-size: small;
 }
 
-.txt-related-3 {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    text-align: center;
-    flex-direction: column;
-    width: 100%;
-    padding-left: 26px;
+/* .sub-menu-1{
+    display: none;
+} */
+
+.color-li a:hover + .sub-menu-1 {
+    display: block;
+    position: relative;
+    margin-top: 15px;
+    text-align: left;
 }
 
-.dropdowns {
-    text-align: center;
-}
-
-.dropdowns ul{
-    padding-left: 0;
-}
-
-.dropdowns li{
+.size-li a{
     text-decoration: none;
-    list-style: none;
-    text-align: justify;
-}
-
-.dropdowns li a{
-    text-decoration: none;
-    list-style: none;
     color: black;
 }
 
-.dropdowns ul li:hover .sub-menu-1{
+/* .sub-menu-2{
+    display: none;
+} */
+
+.size-li a:hover + .sub-menu-2 {
     display: block;
     position: relative;
     margin-top: 15px;
-    margin-left: 15px;
     text-align: left;
-}
-
-.dropdowns ul li:hover .sub-menu-1 ul {
-    display: block;
-    margin: 10px;
-}
-
-.sub-menu-1 {
-    display: none;
-}
-
-.dropdowns ul li:hover .sub-menu-2{
-    display: block;
-    position: relative;
-    margin-top: 15px;
-    margin-left: 15px;
-    text-align: left;
-}
-
-.dropdowns ul li:hover .sub-menu-2 ul {
-    display: block;
-    margin: 10px;
-}
-
-.sub-menu-2 {
-    display: none;
-}
-
-.dropdowns ul li:hover .sub-menu-3{
-    display: block;
-    position: relative;
-    margin-top: 15px;
-    margin-left: 15px;
-    text-align: left;
-}
-
-.dropdowns ul li:hover .sub-menu-3 ul {
-    display: block;
-    margin: 10px;
-}
-
-.sub-menu-3 {
-    display: none;
 }
 
 /* Category */

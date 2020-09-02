@@ -11,56 +11,81 @@
 <body>
     <%- include('./partials/header') %>
     <div class="admin-general-container">
-        <div class="admin-top-buttons">
-            <a href="/admin/productlist"><button class="admin-top-btn admin-button">Pics</button></a>
-            <a href="/admin"><button class="admin-top-btn admin-button">Crear</button></a>
-            <!-- <a href=""><button class="admin-top-btn admin-button">Editar</button></a> -->
-        </div>
+
         <div class="admin-container">
-            <div class="forms-lists" id="cont-detail">
-                <figure class="detail-figure">
-                    <img src="../../images/products/<%= product.images %> " alt="">
-                </figure>
-                <div class="detail-cont-forms">
-                <form action="/admin/product/update/<%= product.id %>?_method=PUT" id='form-update-product' method="POST">
-                    <div class="input-container">
-                        <label for="name">Editá el nombre del producto</label>
-                        <input type="text" class="admin-form-input" name="name" value="<%= product.name %> ">
-                    </div>
-                    <div>
-                        <label for="category">Editá la categoría</label>
-                        <select name="category" id="">
-                            <% categories.forEach( (categoria) => { %> 
-                            <% if (product.categoryId == categoria.id) { %>
-                                <option value="<%= categoria.id %>" selected>
-                                    <%= categoria.name  %> 
-                                </option>
-                            <% } else { %>
-                                <option value="<%= categoria.id %>">
-                                    <%= categoria.name  %> 
-                                </option>
-                            <% }}) %>   
-                        </select>
-                    </div>
-                    <div class="input-container">
-                        <label for="description">Editá la descripción del producto</label>
-                        <textarea name="description" class="admin-form-input" id="" cols="25" rows="5"><%= product.description %></textarea>
-                    </div>
-                    <div>
-                        <button type="submit" class="form-btn-submit">Editar</button>
-                        <button type="reset" class="form-btn-submit">Reset</button>
-                    </div>
-                </form>
-                <form action="/admin/product/delete/<%= product.id %>?_method=DELETE" id='form-destroy-product' method="POST">
-                    <button type="submit" class="form-btn-submit">Eliminar</button>
-                </form>
+            <section class="admin-buttons">
+                <div class="admin-button" id="btn-newpic">
+                    <a href="/admin"><i class="fas fa-undo"></i></a>
+                    <p>Admin</p>
                 </div>
-            </div>
+                <div class="admin-button" id="btn-newpic">
+                    <a href="/admin/productlist"><i class="far fa-images"></i></a>
+                    <p>All pics</p>
+                </div>
+                <div class="admin-button" id="btn-color">
+                    <!-- <i class="far fa-square"></i>
+                    <p>Color</p> -->
+                </div>
+                <div class="admin-button" id="btn-sizes">
+                    <!-- <i class="fas fa-ruler-horizontal"></i>
+                    <p>Medidas</p> -->
+                </div>
+                <div class="admin-button" id="btn-categories">
+                    <!-- <i class="far fa-lightbulb"></i>
+                    <p>Categorías</p> -->
+                </div>
+            </section>
+            <section class="admin-forms">
+                <div class="forms-lists" id="cont-detail">
+                    <figure class="detail-figure">
+                        <img src="../../images/products/<%= product.images %> " alt="">
+                    </figure>
+                    <div class="detail-cont-forms">
+                        <form action="/admin/product/update/<%= product.id %>?_method=PUT" id='form-update-product'
+                            method="POST">
+                            <div class="input-container">
+                                <label for="name">Editá el nombre del producto</label>
+                                <input type="text" class="admin-form-input" name="name" value="<%= product.name %> ">
+                            </div>
+                            <div>
+                                <label for="category">Editá la categoría</label>
+                                <select name="category" id="">
+                                    <% categories.forEach( (categoria) => { %>
+                                    <% if (product.categoryId == categoria.id) { %>
+                                    <option value="<%= categoria.id %>" selected>
+                                        <%= categoria.name  %>
+                                    </option>
+                                    <% } else { %>
+                                    <option value="<%= categoria.id %>">
+                                        <%= categoria.name  %>
+                                    </option>
+                                    <% }}) %>
+                                </select>
+                            </div>
+                            <div class="input-container">
+                                <label for="description">Editá la descripción del producto</label>
+                                <textarea name="description" class="admin-form-input" id="" cols="25"
+                                    rows="5"><%= product.description %></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="form-btn-submit">Editar</button>
+                                <button type="reset" class="form-btn-submit">Reset</button>
+                            </div>
+                        </form>
+                        <form action="/admin/product/delete/<%= product.id %>?_method=DELETE" id='form-destroy-product'
+                            method="POST">
+                            <button type="submit" class="form-btn-submit">Eliminar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
         </div>
+        <div class="adminErrors"></div>
     </div>
-    <p style="text-align: center; color: red;">errores</p>
+
 
     <%- include('./partials/footer') %>
+    <script src="/JS/adminModal.js"></script>
 </body>
 
 </html>
