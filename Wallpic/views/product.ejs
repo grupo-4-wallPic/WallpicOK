@@ -40,7 +40,7 @@
                     <div class='seleccion'>
                         <div class='product-txt'>
                             <p><%= product.name %> </p>
-                            <h2>$<%= sizes[2].price %></h2> 
+                            <h2 class="main-price">$590.00</h2> 
                             <p>Medios de pago</p>
                         </div>
                         <div class='tarjetas'>
@@ -66,9 +66,9 @@
                                 <div class='sub-menu-2'>
                                 <% sizes.forEach(size => { %>
                                         <label for="<%= size.id %>"><%= size.size %></label> 
-                                        <input class="size-input" id="<%= size.id %>" type="radio" name="checkSize" value="<%= size.size %>">
-                                        <input type="hidden" name="checkPrice" value="<%= size.price %>">
+                                        <input class="size-input" id="<%= size.price %>" type="radio" name="checkSize" value="<%= size.size %>">
                                 <% }); %>
+                                <input class="checkPrice" type="hidden" name="checkPrice" value="">
                             </div>
                             </li>
                         </ul>
@@ -139,7 +139,7 @@
 
 
 
-
+        <script src="/JS/producto.js"></script>
 
         <%- include('./partials/footer') %>  
     </div>
