@@ -143,6 +143,42 @@ categoriesList.forEach( (category) => {
         destroyCategory.attributes.action.value= `admin/category/delete/${categoryId}?_method=DELETE`
         // console.log(input)
     })
-})  
+})
+
+
+    // Validación todos los formularios
+    let allForms = document.querySelectorAll('.admin-forms form')
+
+    allForms.forEach( form => {
+
+        form.addEventListener('submit', () => {
+            
+            let errors = [];
+
+            let generalErrors = document.querySelector('.adminErrors');
+
+            generalErrors.innerHTML= '';
+
+            let inputs = form.querySelectorAll('input, textarea') 
+
+            inputs.forEach( input => {
+
+                if (input.value == "") {
+                errors.push(`El campo ${input.name} no puede estar vacío`);
+            }
+
+            } )
+
+            if(errors.length > 0){
+                event.preventDefault()
+                errors.forEach( error => {
+                    generalErrors.innerHTML += `<p>${error}</p>`
+                } )
+            }
+
+        })
+
+    } )
+
 
 })
