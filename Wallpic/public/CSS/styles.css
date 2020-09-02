@@ -138,22 +138,22 @@ body {
 
 .animacion1 {
     position: absolute;
-    top: 234px;
+    top: 194px;
     left: 564px;
     opacity: 0;
-    animation: buho 40s infinite;
+    animation: Mr 40s infinite;
     animation-timing-function: ease-out;
-    width: 125px;
-    height: 185px;
+    width: 135px;
+    height: 195px;
 }
 
-@keyframes buho {
+@keyframes Mr {
     5% {
-        top: 210px;
+        top: 190px;
         left: 604px;
         opacity: 0;}
     8% {
-        top: 234px;
+        top: 194px;
         left: 564px;
         opacity:0.8;}
     9% { opacity: 1;}
@@ -162,22 +162,22 @@ body {
 }
 .animacion2 {
     position: absolute;
-    top: 234px;
+    top: 194px;
     left: 744px;
     opacity: 0;
-    animation: buho2 40s infinite;
+    animation: Mrs 40s infinite;
     animation-timing-function: ease-out;
-    width: 125px;
-    height: 185px;
+    width: 135px;
+    height: 195px;
 }
 
-@keyframes buho2 {
+@keyframes Mrs {
     5% {
-        top: 254px;
+        top: 214px;
         left: 744px;
         opacity: 0;}
     8% {
-        top: 234px;
+        top: 194px;
         left: 744px;
         opacity:0.8;}
     9% { opacity: 1;}
@@ -187,7 +187,7 @@ body {
 #animacion3 {
     position: absolute;
     top: 135px;
-    left: 50px;
+    left: 45px;
     opacity: 0;
     animation: frase1 40s infinite;
     animation-timing-function: ease-out;
@@ -195,7 +195,7 @@ body {
     height: 200px;
     font-family: Montserrat;
     font-style: oblique;
-    font-size: 55px;
+    font-size: 50px;
     font-weight: lighter;
     z-index: 4;
     color:#2F4F4F;
@@ -203,21 +203,22 @@ body {
 }
 
 @keyframes frase1 {
-    7% {
+    10% {
         top: 140px;
         left: 50px;
         opacity: 0;}
-    9% {
+    12% {
         top: 135px;
-        left: 50px;
+        left: 45px;
         opacity:1;}
+    13% {left: 45px;}
     28% {opacity: 1;}
     29% {opacity: 0;}
 }
 #animacion4 {
     position: absolute;
     top: 185px;
-    left: 50px;
+    left: 55px;
     opacity: 0;
     animation: frase2 40s infinite;
     animation-timing-function: ease-out;
@@ -233,17 +234,141 @@ body {
 }
 
 @keyframes frase2 {
-    7% {
+    10% {
         top: 175px;
         left: 50px;
         opacity: 0;}
-    9% {
+    12% {
         top: 185px;
-        left: 50px;
+        left: 55px;
         opacity:1;}
+    13% {left: 55px;}
     28% {opacity: 1;}
     29% {opacity: 0;}
 }
+.animacion5 {
+    position: absolute;
+    top: 234px;
+    left: 344px;
+    opacity: 0;
+    animation: buho 40s infinite;
+    animation-timing-function: ease-out;
+    width: 135px;
+    height: 195px;
+}
+
+@keyframes buho {
+    35% {
+        top: 224px;
+        left: 340px;
+        opacity: 0;}
+    38% {
+        top: 234px;
+        left: 344px;
+        opacity:0.8;}
+    39% { opacity: 1;}
+    60% {opacity: 1;}
+    63% {opacity: 0;}
+}
+
+
+.animacion9 {
+    position: absolute;
+    top: 174px;
+    left: 1204px;
+    opacity: 0;
+    animation: girafa 40s infinite;
+    animation-timing-function: ease-out;
+    width: 215px;
+    height: 175px;
+}
+
+@keyframes girafa {
+    40% {
+        top: 180px;
+        left: 1200px;
+        opacity: 0;}
+    42% {
+        top: 174px;
+        left: 1204px;
+        opacity:0.8;}
+    44% { opacity: 1;}
+    60% {opacity: 1;}
+    63% {opacity: 0;}
+}
+.animacion10 {
+    position: absolute;
+    top: 234px;
+    left: 496px;
+    opacity: 0;
+    animation: elefante 40s infinite;
+    animation-timing-function: ease-out;
+    width: 135px;
+    height: 195px;
+}
+
+@keyframes elefante {
+    35% {
+        top: 230px;
+        left: 500px;
+        opacity: 0;}
+    38% {
+        top: 234px;
+        left: 496px;
+        opacity:0.8;}
+    39% { opacity: 1;}
+    60% {opacity: 1;}
+    63% {opacity: 0;}
+}
+.animacion11 {
+    position: absolute;
+    top: 194px;
+    left: 514px;
+    opacity: 0;
+    animation: organic1 40s infinite;
+    animation-timing-function: ease-out;
+    width: 185px;
+    height: 245px;
+}
+
+@keyframes organic1 {
+    70% {
+        top: 190px;
+        left: 524px;
+        opacity: 0;}
+    72% {
+        top: 194px;
+        left: 514px;
+        opacity:0.8;}
+    73% { opacity: 1;}
+    94% {opacity: 1;}
+    95% {opacity: 0;}
+}
+.animacion12 {
+    position: absolute;
+    top: 194px;
+    left: 724px;
+    opacity: 0;
+    animation: organic2 40s infinite;
+    animation-timing-function: ease-out;
+    width: 185px;
+    height: 245px;
+}
+
+@keyframes organic2 {
+    70% {
+        top: 214px;
+        left: 720px;
+        opacity: 0;}
+    72% {
+        top: 194px;
+        left: 724px;
+        opacity:0.8;}
+    73% { opacity: 1;}
+    94% {opacity: 1;}
+    95% {opacity: 0;}
+}
+
 /*** Header ***/
 
 header {
@@ -764,30 +889,7 @@ header {
     justify-content: space-around;
     margin-top: 2%;
 }
-.categoria-individual{
-    display: flex;
-    flex-direction: column;
-    background-color: transparent;
-    margin-top: 4%;
-}
-.categoriascuadros{
-    position: relative;
-    height:auto;
-    width: 25%;
-    background-color:transparent;
-    display: flex;
-}
-.categoriascuadros img{
-    position: absolute;
-    transition: opacity 1.5s ease-in-out;
-    width: 70%;
-    height: auto;
-    margin: 2% 0 0 10%;
-}
-.categoriascuadros img.top:hover{
-    opacity: 0;
 
-}
 .container-categorias h2{
     text-align: center;
     background-color: white;
@@ -795,29 +897,7 @@ header {
     border-radius: 15px;
     margin: auto;
     padding: 9px;
-
-    
-}
-.categoriascuadros h3{
-    position: absolute;
-    font-size: 40px;
-    color: white;
-    z-index: 5;
-}
-.opacidadcategoria {
-    position: absolute;
-    height: inherit;
-    width: 25%;
-    z-index: 1;
-    background-color:grey;
-    opacity: 0.4;
-}
-.categoria-trio{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: -30%;
-    margin-bottom: 1%;
+  
 }
 
 /*** Last-section ***/
@@ -1943,7 +2023,7 @@ footer {
     .slider {
         width: 100%;
         margin: auto;
-        height: 600px;
+        height: 650px;
         overflow: hidden;
         box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
     }
@@ -1963,7 +2043,7 @@ footer {
      .slider img {
         width: 100%;
         height: 650px;
-        width: 1420px;
+        width: 1440px;
     
     }
 
