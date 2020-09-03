@@ -14,29 +14,35 @@ module.exports = {
 
         return res.render('loginView')
     },
-    login: (req, res) => {
-        let errors = validationResult(req);
+  login: (req, res) => {
+    let errors = validationResult(req);
 
-        if (errors.isEmpty()) {
-            Users.findOne({ where: { email: req.body.email } })
-            .then(function(user){ 
-            // users.findBySomething(user => user.email == req.body.email);
-      delete user.password;
+    if (errors.isEmpty()) {
+      Users.findOne({ where: { email: req.body.email } })
+        .then(function (user) {
+          // users.findBySomething(user => user.email == req.body.email);
+          // console.log(user)
+          delete user.dataValues.password;
+          
+          // user = {
+          //   ...user.dataValues,
+          //   cart: 5
+          // }
 
-      req.session.user = user; // YA ESTÁ EN SESION
+          // console.log(user)
+          req.session.user = user; // YA ESTÁ EN SESION
+  
+          if (req.body.remember) {
+            // Creo la cookie
+            res.cookie('email', user.email, { maxAge: 1000 * 60 * 60 * 24 });
 
-      if (req.body.remember) {
-        // Creo la cookie
-
-        res.cookie('email', user.email, { maxAge: 1000 * 60 * 60 * 24 });
-
-      }
-        return res.redirect('/');
-      });
-        } else {
-        return res.render('loginView', {errors: errors.mapped(), old:req.body});
-        }   
-    },
+          }
+          return res.redirect('/');
+        });
+    } else {
+      return res.render('loginView', { errors: errors.mapped(), old: req.body });
+    }
+  },
     logout: function(req, res) {
         // Desloguear al usuario
     

@@ -14,16 +14,17 @@
     </section>
     <div class="shopping-container">
     <section class="shopping-cart-first">
+        <% carts.forEach( cart => { %> 
         <div class="cart-hero">
             <div class="cart-hero-left">
                 <figure>
-                    <img src="/images/animales/Buho.jpg" alt="">
+                    <img src="/images/products/<%= cart.image %> " alt="">
                 </figure>
             </div>
             <div class="cart-hero-center">
-                <h4>owl with light blue eyes</h4>
-                <p>medidas</p>
-                <p>precio unidad</p>
+                <h4><%= cart.title %> </h4>
+                <p>medida: <%= cart.size %> </p>
+                <p>precio unidad: $<%= cart.price %> </p>
                 <p class="cart-price">precio</p>
                 <form action="cart-hero-quantity">
                     <button class="cart-hero-center-minus"><i class="fas fa-minus"></i></button>
@@ -38,28 +39,7 @@
         
         </div>
         <hr>
-        <div class="cart-hero">
-            <div class="cart-hero-left">
-                <figure>
-                    <img src="/images/animales/ciervos.jpg" alt="">
-                </figure>
-            </div>
-            <div class="cart-hero-center">
-                <h4 class="cart-hero-title">ciervos</h4>
-                <p>medidas</p>
-                <p>precio unidad</p>
-                <p class="cart-price">precio</p>
-                <form action="cart-hero-quantity">
-                    <button class="cart-hero-center-minus"><i class="fas fa-minus"></i></button>
-                    <input type="text">
-                    <button class="cart-hero-center-plus"><i class="fas fa-plus"></i></button>
-                </form>
-
-            </div>
-            <div class="cart-hero-right">
-                <button class="cart-hero-trash"><i class="fas fa-trash"></i></button>
-            </div>
-        </div>
+        <% }) %> 
     </section>
     
     <section class="shopping-cart-last">
