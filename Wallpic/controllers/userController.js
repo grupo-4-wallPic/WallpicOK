@@ -46,17 +46,5 @@ const userController = {
 
     },
 
-    cart: (req, res) => {
-        Carts.findAll({
-            where: {
-                state: 0,
-                user_id: req.session.user.id
-            }
-        })
-        .then(carts => {
-            return res.render ('/cart', {carts});
-        })
-    }
-
 }
     module.exports = userController;
