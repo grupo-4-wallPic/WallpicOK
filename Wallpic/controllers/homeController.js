@@ -14,8 +14,8 @@ const homecontroller = {
     });
         return res.render('index', {mostsale})
     },
-    nosotros: (req, res) =>{
-        res.render ('nosotros')
+    nosotras: (req, res) =>{
+        res.render ('nosotras')
     },
     contacto: (req, res) =>{
         res.render ('contacto')
@@ -23,8 +23,8 @@ const homecontroller = {
     faq: (req, res) =>{
         res.render ('FAQ')
     },
-    GrandesClientes: (req, res) =>{
-        res.render ('GrandesClientes')
+    mayorista: (req, res) =>{
+        res.render ('mayorista')
     },
     inicio: (req, res) =>{
         res.render ('/')
