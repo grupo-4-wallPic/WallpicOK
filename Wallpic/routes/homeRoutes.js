@@ -11,8 +11,8 @@ router.post('/login', validator.login, loginController.login);
 router.get ('/register', registerController.index)
 router.post('/register', validator.registerValidator, registerController.registro);
 router.post('/logout', loginController.logout);
-router.get ('/nosotros', homeController.nosotros);
-router.get ('/GrandesClientes', homeController.GrandesClientes);
+router.get ('/nosotras', homeController.nosotras);
+router.get ('/mayorista', homeController.mayorista);
 router.get ('/contacto', homeController.contacto);
 router.get ('/FAQ', homeController.faq);
 router.get ('/inicio', homeController.inicio);

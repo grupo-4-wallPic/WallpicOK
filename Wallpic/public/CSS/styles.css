@@ -138,22 +138,22 @@ body {
 
 .animacion1 {
     position: absolute;
-    top: 234px;
+    top: 194px;
     left: 564px;
     opacity: 0;
-    animation: buho 40s infinite;
+    animation: Mr 40s infinite;
     animation-timing-function: ease-out;
-    width: 125px;
-    height: 185px;
+    width: 135px;
+    height: 195px;
 }
 
-@keyframes buho {
+@keyframes Mr {
     5% {
-        top: 210px;
+        top: 190px;
         left: 604px;
         opacity: 0;}
     8% {
-        top: 234px;
+        top: 194px;
         left: 564px;
         opacity:0.8;}
     9% { opacity: 1;}
@@ -162,22 +162,22 @@ body {
 }
 .animacion2 {
     position: absolute;
-    top: 234px;
+    top: 194px;
     left: 744px;
     opacity: 0;
-    animation: buho2 40s infinite;
+    animation: Mrs 40s infinite;
     animation-timing-function: ease-out;
-    width: 125px;
-    height: 185px;
+    width: 135px;
+    height: 195px;
 }
 
-@keyframes buho2 {
+@keyframes Mrs {
     5% {
-        top: 254px;
+        top: 214px;
         left: 744px;
         opacity: 0;}
     8% {
-        top: 234px;
+        top: 194px;
         left: 744px;
         opacity:0.8;}
     9% { opacity: 1;}
@@ -187,7 +187,7 @@ body {
 #animacion3 {
     position: absolute;
     top: 135px;
-    left: 50px;
+    left: 45px;
     opacity: 0;
     animation: frase1 40s infinite;
     animation-timing-function: ease-out;
@@ -195,7 +195,7 @@ body {
     height: 200px;
     font-family: Montserrat;
     font-style: oblique;
-    font-size: 55px;
+    font-size: 50px;
     font-weight: lighter;
     z-index: 4;
     color:#2F4F4F;
@@ -203,21 +203,22 @@ body {
 }
 
 @keyframes frase1 {
-    7% {
+    10% {
         top: 140px;
         left: 50px;
         opacity: 0;}
-    9% {
+    12% {
         top: 135px;
-        left: 50px;
+        left: 45px;
         opacity:1;}
+    13% {left: 45px;}
     28% {opacity: 1;}
     29% {opacity: 0;}
 }
 #animacion4 {
     position: absolute;
     top: 185px;
-    left: 50px;
+    left: 55px;
     opacity: 0;
     animation: frase2 40s infinite;
     animation-timing-function: ease-out;
@@ -233,17 +234,141 @@ body {
 }
 
 @keyframes frase2 {
-    7% {
+    10% {
         top: 175px;
         left: 50px;
         opacity: 0;}
-    9% {
+    12% {
         top: 185px;
-        left: 50px;
+        left: 55px;
         opacity:1;}
+    13% {left: 55px;}
     28% {opacity: 1;}
     29% {opacity: 0;}
 }
+.animacion5 {
+    position: absolute;
+    top: 234px;
+    left: 344px;
+    opacity: 0;
+    animation: buho 40s infinite;
+    animation-timing-function: ease-out;
+    width: 135px;
+    height: 195px;
+}
+
+@keyframes buho {
+    35% {
+        top: 224px;
+        left: 340px;
+        opacity: 0;}
+    38% {
+        top: 234px;
+        left: 344px;
+        opacity:0.8;}
+    39% { opacity: 1;}
+    60% {opacity: 1;}
+    63% {opacity: 0;}
+}
+
+
+.animacion9 {
+    position: absolute;
+    top: 174px;
+    left: 1204px;
+    opacity: 0;
+    animation: girafa 40s infinite;
+    animation-timing-function: ease-out;
+    width: 215px;
+    height: 175px;
+}
+
+@keyframes girafa {
+    40% {
+        top: 180px;
+        left: 1200px;
+        opacity: 0;}
+    42% {
+        top: 174px;
+        left: 1204px;
+        opacity:0.8;}
+    44% { opacity: 1;}
+    60% {opacity: 1;}
+    63% {opacity: 0;}
+}
+.animacion10 {
+    position: absolute;
+    top: 234px;
+    left: 496px;
+    opacity: 0;
+    animation: elefante 40s infinite;
+    animation-timing-function: ease-out;
+    width: 135px;
+    height: 195px;
+}
+
+@keyframes elefante {
+    35% {
+        top: 230px;
+        left: 500px;
+        opacity: 0;}
+    38% {
+        top: 234px;
+        left: 496px;
+        opacity:0.8;}
+    39% { opacity: 1;}
+    60% {opacity: 1;}
+    63% {opacity: 0;}
+}
+.animacion11 {
+    position: absolute;
+    top: 194px;
+    left: 514px;
+    opacity: 0;
+    animation: organic1 40s infinite;
+    animation-timing-function: ease-out;
+    width: 185px;
+    height: 245px;
+}
+
+@keyframes organic1 {
+    70% {
+        top: 190px;
+        left: 524px;
+        opacity: 0;}
+    72% {
+        top: 194px;
+        left: 514px;
+        opacity:0.8;}
+    73% { opacity: 1;}
+    94% {opacity: 1;}
+    95% {opacity: 0;}
+}
+.animacion12 {
+    position: absolute;
+    top: 194px;
+    left: 724px;
+    opacity: 0;
+    animation: organic2 40s infinite;
+    animation-timing-function: ease-out;
+    width: 185px;
+    height: 245px;
+}
+
+@keyframes organic2 {
+    70% {
+        top: 214px;
+        left: 720px;
+        opacity: 0;}
+    72% {
+        top: 194px;
+        left: 724px;
+        opacity:0.8;}
+    73% { opacity: 1;}
+    94% {opacity: 1;}
+    95% {opacity: 0;}
+}
+
 /*** Header ***/
 
 header {
@@ -764,30 +889,7 @@ header {
     justify-content: space-around;
     margin-top: 2%;
 }
-.categoria-individual{
-    display: flex;
-    flex-direction: column;
-    background-color: transparent;
-    margin-top: 4%;
-}
-.categoriascuadros{
-    position: relative;
-    height:auto;
-    width: 25%;
-    background-color:transparent;
-    display: flex;
-}
-.categoriascuadros img{
-    position: absolute;
-    transition: opacity 1.5s ease-in-out;
-    width: 70%;
-    height: auto;
-    margin: 2% 0 0 10%;
-}
-.categoriascuadros img.top:hover{
-    opacity: 0;
 
-}
 .container-categorias h2{
     text-align: center;
     background-color: white;
@@ -795,29 +897,7 @@ header {
     border-radius: 15px;
     margin: auto;
     padding: 9px;
-
-    
-}
-.categoriascuadros h3{
-    position: absolute;
-    font-size: 40px;
-    color: white;
-    z-index: 5;
-}
-.opacidadcategoria {
-    position: absolute;
-    height: inherit;
-    width: 25%;
-    z-index: 1;
-    background-color:grey;
-    opacity: 0.4;
-}
-.categoria-trio{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: -30%;
-    margin-bottom: 1%;
+  
 }
 
 /*** Last-section ***/
@@ -1111,6 +1191,405 @@ footer {
     font-size: 12px;
     color: white;
 }
+/* ------------- FAQ----------------- */
+
+.banner-container-FAQ {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+   }
+ .fondofaq {
+    width: 100%;
+    margin: -30% 0% 0% 0%;
+    box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+ }
+ .letrablanca ,.letranegra {
+     position: absolute;
+     font-size: 220px;
+     top: 15px;
+     font-family: 'Lexend Deca', sans-serif;
+     text-shadow: 0px 3px 3px rgba(0,0,0,0.52);
+ }
+ .letranegra {
+     color: black;
+ }
+ .letrablanca {
+     color: white;
+ }
+ #F {
+     left: 900px;
+     font-size: 250px;
+ }
+ #A{
+     left: 1030px;
+     font-size: 250px;
+ }
+ #Q{
+     left: 1195px;
+     top: 55px;
+     font-size: 215px;
+ }
+ .FAQtitle {
+    display: flex;
+    margin: 6% 5%;
+    justify-content: space-around;
+ }
+ .tituloFAQ{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    margin-top: 6%;
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+ }
+ .clipimg {
+     width: 50%;
+ }
+ .clipimg img {
+    width: 70%;
+    margin-left: 15%;
+    box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+ }
+ .FAQquestions {
+    width: 90%;
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    font-family: roboto;
+}
+ .FAQarticles {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 3% auto;
+}
+ .articletitle {
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+ }
+ .articletitle i{
+    font-size: 30px;
+    margin-top: 25px;
+ }
+ .articletitle h3 {
+    font-size: 25px;
+    font-weight: bolder;
+    margin-left: 25px;
+ }
+ .FAQarticles p {
+    font-size: 16px;
+    width: 60%;
+    line-height: 30px;
+    margin: auto;
+ }
+
+ /* ------------- NOSOTRAS----------------- */
+
+ .banner-container-NOSOTRAS {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+   }
+   .fondonosotras {
+    width: 107%;
+    margin: -29% 0% 0% -7%;
+   }
+   #N{
+    left:50px;
+    top: 80px;
+   }
+   #O {
+    left: 243px;
+    top: 80px;
+   }
+   #S{
+    left: 427px;
+    top: 80px;
+   }
+   #O2 {
+    left: 579px;
+    top: 80px;
+   }
+   #T{
+    left: 760px;
+    top: 80px;
+   }
+   #R{
+    left: 897px;
+    top: 80px;
+   }
+   #A2{
+    left: 1080px;
+    top: 80px;
+   }
+   #S2{
+    left: 1250px;
+    top: 80px;
+   }
+   .container-nosotras {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 10% auto;
+   }
+   .nosotras-article {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% auto;
+   }
+   .texto-derecha, .textoizquierda {
+    width: 50%;
+    margin: auto;
+   }
+   .texto-izquierda{
+       margin-top: 60px;
+   }
+   .titulo-nosotras {
+    text-align: center;
+    font-family: roboto;
+    font-weight: bolder;
+    font-size: 40px;
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+   }
+   .nosotras-parraf {
+    text-align: center;
+    font-family: roboto;
+    font-size: 16px;
+    line-height: 30px;
+    width: 70%;
+    margin: auto;
+   }
+   .foto-container-nosotras {
+    width: 35%;
+    height: 400px;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 100%;
+   }
+   .nosotras-parraf-2 {
+    text-align: center;
+    font-family: roboto;
+    font-size: 16px;
+    line-height: 20px;
+    width: 70%;
+    margin: auto;
+   }
+   .nosotras-parraf-3 {
+    text-align: center;
+    font-family: roboto;
+    font-size: 16px;
+    line-height: 24px;
+    width: 70%;
+    margin: auto;
+   }
+   .foto-container-nosotras-cuadrado {
+    width: 35%;
+    height: 300px;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 19%;
+   }
+   .img-nosotras-1 {
+       width: 100%;
+       margin-top: 52px;
+   }
+   .img-nosotras-2 {
+    width: 100%;
+    margin-top: 43px;
+}
+.foto-container-nosotras-cuadrado img {
+    width: 115%;
+}
+
+/* ------------- MAYORISTA ----------------- */
+
+.banner-container-MAYORISTA {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+   }
+
+   .fondomayorista {
+    width: 100%;
+    margin: -11% 0% 0% 0%;
+    box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+   }
+   #M{
+    top: 85px;
+    left: 20px;
+   }
+   #A3{
+    top: 85px;
+    left: 220px;
+   }
+   #Y{
+    top: 85px;
+    left: 360px;
+   }
+   #O3{
+    top: 85px;
+    left: 510px;
+   }
+   #R2{
+    top: 85px;
+    left: 680px;
+   }
+   #I{
+    top: 85px;
+    left: 850px;
+   }
+   #S3{
+    top: 85px;
+    left: 970px;
+   }
+   #T2{
+    top: 85px;
+    left: 1120px;
+   }
+   #A4{
+    top: 85px;
+    left: 1240px;
+   }
+   .container-mayorista {
+    width: 90%;
+    margin: 10% auto;
+    display: flex;
+    flex-direction: column;
+   }
+   .mayorista-title {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    font-size: 60px;
+    font-family: roboto;
+    font-weight: bolder;
+   }
+   .mayorista-article{
+   display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+   }
+   .mayorista-article p {
+    width: 50%;
+    margin-top: 12%;
+    margin-right: 7%;
+    text-align: center;
+    font-size: 30px;
+    font-family: roboto;
+    line-height: 35px;
+   }
+   .container-mayorista-foto {
+    width: 70%;
+    margin: auto;
+   }
+   .container-mayorista-foto img{
+    width: 100%;
+    border-radius: 5%;
+    box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+   }
+
+   #mayorista-animacion-1, #mayorista-animacion-2, #mayorista-animacion-3,
+    #mayorista-animacion-4, #mayorista-animacion-5, #mayorista-animacion-6,
+     #mayorista-animacion-7, #mayorista-animacion-8, #mayorista-animacion-9 , #mayorista-animacion-10  {
+        width: 130px;
+        height: 180px;
+        opacity: 0;
+        box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+   }
+   #mayorista-animacion-1,#mayorista-animacion-3,
+   #mayorista-animacion-5,#mayorista-animacion-7,
+   #mayorista-animacion-9  {
+       position: absolute;
+       top: 980px;
+       left: 880px;
+   }
+   #mayorista-animacion-2,#mayorista-animacion-4,
+   #mayorista-animacion-6,#mayorista-animacion-8,
+   #mayorista-animacion-10  {
+       position: absolute;
+       top: 980px;
+       left: 1020px;
+   }
+
+   #mayorista-animacion-1,#mayorista-animacion-2{
+       animation: animacion1 30s infinite;
+       transition: ease-in-out;
+   }
+   @keyframes animacion1 {
+       3% {opacity: 0;}
+       8% {opacity: 1;}
+       18% {opacity: 1;}
+       21% {opacity: 0;}
+       
+   }
+   
+   #mayorista-animacion-3, #mayorista-animacion-4{
+    animation: animacion2 30s infinite;
+    transition: ease-in-out;
+}
+@keyframes animacion2 {
+    22% {opacity: 0;}
+    25% {opacity: 1;}
+    35% {opacity: 1;}
+    38% {opacity: 0;}
+    
+}
+#mayorista-animacion-5, #mayorista-animacion-6{
+    animation: animacion3 30s infinite;
+    transition: ease-in-out;
+}
+@keyframes animacion3 {
+    40% {opacity: 0;}
+    42% {opacity: 1;}
+    52% {opacity: 1;}
+    55% {opacity: 0;}
+    
+}
+#mayorista-animacion-7, #mayorista-animacion-8{
+    animation: animacion4 30s infinite;
+    transition: ease-in-out;
+}
+@keyframes animacion4 {
+    56% {opacity: 0;}
+    59% {opacity: 1;}
+    69% {opacity: 1;}
+    72% {opacity: 0;}
+    
+}
+#mayorista-animacion-9, #mayorista-animacion-10{
+    animation: animacion5 30s infinite;
+    transition: ease-in-out;
+}
+@keyframes animacion5 {
+    73% {opacity: 0;}
+    76% {opacity: 1;}
+    86% {opacity: 1;}
+    89% {opacity: 0;}
+    
+}
+#mayorista-animacion-11{
+    animation: animacion6 30s infinite;
+    transition: ease-in-out;
+    position: absolute;
+       top: 980px;
+       left: 878px;
+       width: 280px;
+        height: 190px;
+        opacity: 0;
+        box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+}
+@keyframes animacion6 {
+    90% {opacity: 0;}
+    93% {opacity: 1;}
+    100% {opacity: 1;}
+    101% {opacity: 0;}
+    
+}
+
 
 /***********shoppingCart*************/
 
@@ -1882,7 +2361,7 @@ footer {
     .slider {
         width: 100%;
         margin: auto;
-        height: 600px;
+        height: 650px;
         overflow: hidden;
         box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
     }
@@ -1902,7 +2381,7 @@ footer {
      .slider img {
         width: 100%;
         height: 650px;
-        width: 1420px;
+        width: 1440px;
     
     }
 
