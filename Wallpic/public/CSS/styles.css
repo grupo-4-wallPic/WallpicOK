@@ -2162,7 +2162,172 @@ footer {
     .desapear-line {
         display: none;
     }
+      /*** MAYORISTA ***/
+      .banner-container-MAYORISTA {
+        height: 230px;
+       }
 
+       .letrablanca ,.letranegra {
+        font-size: 120px;
+    }
+
+
+    #M{
+        top: 85px;
+        left: 20px;
+       }
+       #A3{
+        top: 85px;
+        left: 125px;
+       }
+       #Y{
+        top: 85px;
+        left: 195px;
+       }
+       #O3{
+        top: 85px;
+        left: 275px;
+       }
+       #R2{
+        top: 85px;
+        left: 370px;
+       }
+       #I{
+        top: 85px;
+        left: 455px;
+       }
+       #S3{
+        top: 85px;
+        left: 510px;
+       }
+       #T2{
+        top: 85px;
+        left: 590px;
+       }
+       #A4{
+        top: 85px;
+        left: 655px;
+       }
+       .mayorista-title {
+        font-size: 40px;
+       }
+       .mayorista-article{
+        margin-top: 13%;
+       }
+
+       .mayorista-article p {
+        margin-top: 6%;
+        font-size: 20px;
+        line-height: 25px;
+       }
+
+       #mayorista-animacion-1, #mayorista-animacion-2, #mayorista-animacion-3,
+    #mayorista-animacion-4, #mayorista-animacion-5, #mayorista-animacion-6,
+     #mayorista-animacion-7, #mayorista-animacion-8, #mayorista-animacion-9 , #mayorista-animacion-10  {
+        width: 80px;
+        height: 100px;
+   }
+   #mayorista-animacion-1,#mayorista-animacion-3,
+   #mayorista-animacion-5,#mayorista-animacion-7,
+   #mayorista-animacion-9  {
+       top: 615px;
+       left: 465px;
+   }
+   #mayorista-animacion-2,#mayorista-animacion-4,
+   #mayorista-animacion-6,#mayorista-animacion-8,
+   #mayorista-animacion-10  {
+       top: 615px;
+       left: 552px;
+   }
+
+   #mayorista-animacion-11{
+       top: 615px;
+       left: 465px;
+       width: 170px;
+        height: 100px;
+}
+      /**  Nosotras **/
+
+.banner-container-NOSOTRAS {
+    height: 230px;
+   }
+   .fondonosotras {
+    width: 100%;
+    margin: -27% 0% 0% -0%;
+   }
+   #N{
+    left:20px;
+    top: 100px;
+   }
+   #O {
+    left: 113px;
+    top: 100px;
+   }
+   #S{
+    left: 210px;
+    top: 100px;
+   }
+   #O2 {
+    left: 285px;
+    top: 100px;
+   }
+   #T{
+    left: 385px;
+    top: 100px;
+   }
+   #R{
+    left: 455px;
+    top: 100px;
+   }
+   #A2{
+    left: 545px;
+    top: 100px;
+   }
+   #S2{
+    left: 630px;
+    top: 100px;
+   }
+   .titulo-nosotras {
+    font-size: 30px;
+   }
+   .nosotras-parraf {
+    line-height: 20px;
+   }
+   .foto-container-nosotras {
+    width: 40%;
+    height: 300px;
+    margin-top: 10%;
+   }
+   .nosotras-parraf-2 {
+    text-align: center;
+    font-family: roboto;
+    font-size: 16px;
+    line-height: 20px;
+    width: 70%;
+    margin: auto;
+   }
+   .nosotras-parraf-3 {
+    text-align: center;
+    font-family: roboto;
+    font-size: 16px;
+    line-height: 24px;
+    width: 70%;
+    margin: auto;
+   }
+   .foto-container-nosotras-cuadrado {
+    width: 40%;
+    height: 200px;
+   }
+   #container-foto-media-query {
+       width: 70%;
+   }
+
+   .img-nosotras-2 {
+    margin-top: 80px;
+}
+.foto-container-nosotras-cuadrado img {
+    width: 129%;
+}
     /**  Detalle  **/
 
     .imagenes{
@@ -2347,6 +2512,7 @@ footer {
         /* .shopping-cart-last hr {
             display: none;
         } */
+
 
 }
    
