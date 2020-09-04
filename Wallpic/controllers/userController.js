@@ -29,6 +29,9 @@ const userController = {
     },
 
     addToCart: (req, res) => {
+
+                // req.session.user.cart += 1
+
                 Carts.create({
                 user_id: req.session.user.id,
                 title: req.body.checkName,
