@@ -24,7 +24,7 @@ module.exports = {
     },
 
     shop: (req, res) => {
-        let totalPrice;
+        let totalPrice = 0;
         
         Carts.findAll({
             where: {
@@ -42,7 +42,7 @@ module.exports = {
         })
         .then(purchase => {
             return Purchases.create({
-                order_number: purchase.order_number + 1,
+                order_number: purchase ? purchase.order_number + 1 : 1,
                 total: totalPrice,
                 user_id: req.session.user.id
             })

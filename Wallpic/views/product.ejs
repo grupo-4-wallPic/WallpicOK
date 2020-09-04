@@ -55,19 +55,21 @@
                             <li class="color-li">
                                 <a href="#">Marco</a>
                                 <div class='sub-menu-1'>
+                                <select class="select-color" name="color" id="color">
                                 <% colors.forEach(color => { %>
-                                        <label for="<%= color.id %>"><a href=""> <%= color.color %></a></label>
-                                        <input type="radio" id="<%= color.color %>" value="<%= color.color %>" name="checkColor">   
+                                        <option value="<%= color.color %> "><%= color.color %> </option>   
                                 <% }); %> 
+                                </select>
                             </div>
                             </li>
                             <li class="size-li">
                                 <a href="#">Tamaño</a>
                                 <div class='sub-menu-2'>
+                                <select class="select-size" name="size" id="size">
                                 <% sizes.forEach(size => { %>
-                                        <label for="<%= size.id %>"><%= size.size %></label> 
-                                        <input class="size-input" id="<%= size.price %>" type="radio" name="checkSize" value="<%= size.size %>">
+                                        <option class="size-input" value="<%= size.size %> "><%= size.size %></option>
                                 <% }); %>
+                                </select>
                                 <input class="checkPrice" type="hidden" name="checkPrice" value="">
                             </div>
                             </li>
