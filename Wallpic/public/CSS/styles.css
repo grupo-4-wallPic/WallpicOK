@@ -1249,7 +1249,7 @@ footer {
  .clipimg img {
     width: 70%;
     margin-left: 15%;
-    box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+    
  }
  .FAQquestions {
     width: 90%;
@@ -2054,26 +2054,503 @@ footer {
         flex-direction: column;
         margin: 0;
     }
+    .fixheader{
+        height: 53px;
+    }
+    /* ------------- FAQ----------------- */
+
+.banner-container-FAQ {
+    height: 105px;
+   }
+   .fondofaq {
+    margin: -28% 0% 0% 0%;
+    box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+   }
+ #F {
+     left: 140px;
+     font-size: 85px;
+     top: 0px;
+ }
+ #A{
+     left: 186px;
+     font-size: 85px;
+     top: 0px;
+ }
+ #Q{
+     left: 240px;
+     top: 4px;
+     font-size: 78px;
+ }
+ .tituloFAQ{
+    font-size: 16px;
+ }
+ .articletitle {
+    margin-left: 0px;
+ }
+ .articletitle i{
+    font-size: 30px;
+    margin-top: 15px;
+ }
+ .articletitle h3 {
+    font-size: 20px;
+   margin-left: 15px;
+ }
+
+ .FAQarticles p {
+    font-size: 12px;
+    width: 100%;
+    line-height: 20px;
+    margin: auto;
+ }
+  /* ------------- MAYORISTA----------------- */
+.banner-container-MAYORISTA{
+    height: 96px;
+}
+#M {
+    top: 47px;
+    left: 5px;
+    FONT-SIZE: 50px;
+}
+#A3{
+    top: 47px;
+    left: 50px;
+    FONT-SIZE: 50px;
+   }
+   #Y{
+    top: 47px;
+    left: 85px;
+    FONT-SIZE: 50px;
+   }
+   #O3{
+    top: 47px;
+    left: 120px;
+    FONT-SIZE: 50px;
+   }
+   #R2{
+    top: 47px;
+    left: 160px;
+    FONT-SIZE: 50px;
+   }
+   #I{
+    top: 47px;
+    left: 200px;
+    FONT-SIZE: 50px;
+   }
+   #S3{
+    top: 47px;
+    left: 225px;
+    FONT-SIZE: 50px;
+   }
+   #T2{
+    top: 47px;
+    left: 257px;
+    FONT-SIZE: 50px;
+   }
+   #A4{
+    top: 47px;
+    left: 283px;
+    FONT-SIZE: 50px;
+   }
+   .mayorista-title {
+    font-size: 30px;
+   }
+   .mayorista-article{
+    margin-top: 10%;
+   }
+
+   .mayorista-article p {
+    margin-top: 12%;
+    font-size: 10px;
+    line-height: 15px;
+   }
+   .container-mayorista-foto {
+    width: 70%;
+    margin: 15% auto;
+}
+
+   #mayorista-animacion-1, #mayorista-animacion-2, #mayorista-animacion-3,
+#mayorista-animacion-4, #mayorista-animacion-5, #mayorista-animacion-6,
+ #mayorista-animacion-7, #mayorista-animacion-8, #mayorista-animacion-9 , #mayorista-animacion-10  {
+    width: 28px;
+    height: 37px;
+}
+#mayorista-animacion-1,#mayorista-animacion-3,
+#mayorista-animacion-5,#mayorista-animacion-7,
+#mayorista-animacion-9  {
+   top: 380px;
+   left: 212px;
+}
+#mayorista-animacion-2,#mayorista-animacion-4,
+#mayorista-animacion-6,#mayorista-animacion-8,
+#mayorista-animacion-10  {
+   top: 380px;
+   left: 242px;
+}
+
+#mayorista-animacion-11{
+   top: 380px;
+   left: 212px;
+   width: 60px;
+    height: 37px;
+}
+ /**  Nosotras **/
+
+ .banner-container-NOSOTRAS {
+    height: 153px;
+   }
+   .fondonosotras {
+    width: 100%;
+    margin: -19% 0% 0% 0%;
+   }
+   #N{
+    left:5px;
+    top: 80px;
+    font-size: 50px;
+   }
+   #O {
+    left: 45px;
+    top: 80px;
+    font-size: 50px;
+   }
+   #S{
+    left: 85px;
+    top: 80px;
+    font-size: 50px;
+   }
+   #O2 {
+    left: 115px;
+    top: 80px;
+    font-size: 50px;
+   }
+   #T{
+    left: 155px;
+    top: 80px;
+    font-size: 50px;
+   }
+   #R{
+    left: 185px;
+    top: 80px;
+    font-size: 50px;
+   }
+   #A2{
+    left: 220px;
+    top: 80px;
+    font-size: 50px;
+   }
+   #S2{
+    left: 255px;
+    top: 80px;
+    font-size: 50px;
+   }
+   .nosotras-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5% auto;
+}
+   .titulo-nosotras {
+    font-size: 30px;
+   }
+   .nosotras-parraf {
+    line-height: 20px;
+    font-size: 16px;
+   }
+   .foto-container-nosotras {
+    width: 100%;
+    height: 320px;
+   }
+   .nosotras-parraf-2 {
+    text-align: center;
+    font-family: roboto;
+    font-size: 16px;
+    line-height: 20px;
+    width: 70%;
+    margin: auto;
+   }
+   .nosotras-parraf-3 {
+    text-align: center;
+    font-family: roboto;
+    font-size: 16px;
+    line-height: 24px;
+    width: 70%;
+    margin: auto;
+   }
+   .foto-container-nosotras-cuadrado {
+    width: 95%;
+    height: 177px;
+    margin: 10% auto;
+   }
+   .texto-derecha, .textoizquierda {
+    width: 100%;
+    margin: auto;
+}
+
+}
+
 
     /**** Admin Styles ****/
 
-}
 
 @media screen and (min-width: 380px) {
 
     #cont-detail{
         flex-direction: row;
     }
+    .fixheader{
+        height: 65px;
+    }
+    /* ------------- FAQ----------------- */
 
+.banner-container-FAQ {
+    height: 124px;
+   }
+   .fondofaq {
+    margin: -28% 0% 0% 0%;
+    box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+   }
+ #F {
+     left: 185px;
+     font-size: 100px;
+     top: 0px;
+ }
+ #A{
+     left: 240px;
+     font-size: 100px;
+     top: 0px;
+ }
+ #Q{
+     left: 305px;
+     top: 7px;
+     font-size: 90px;
+ }
+ .FAQtitle {
+    margin: 10% 5%;
+ }
+ .tituloFAQ{
+    font-size: 20px;
+ }
+ .articletitle {
+    margin-left: 0px;
+ }
+ .articletitle i{
+    font-size: 30px;
+    margin-top: 15px;
+ }
+ .articletitle h3 {
+    font-size: 20px;
+   margin-left: 15px;
+ }
+
+ .FAQarticles p {
+    font-size: 12px;
+    width: 100%;
+    line-height: 20px;
+    margin: auto;
+ }
+
+ /* ------------- MAYORISTA----------------- */
+.banner-container-MAYORISTA{
+    height: 113px;
+}
+#M {
+    top: 55px;
+    left: 5px;
+    FONT-SIZE: 60px;
+}
+#A3{
+    top: 55px;
+    left: 60px;
+    font-size: 60px;
+   }
+   #Y{
+    top: 55px;
+    left: 100px;
+    font-size: 60px;
+   }
+   #O3{
+    top: 55px;
+    left: 140px;
+    font-size: 60px;
+   }
+   #R2{
+    top: 55px;
+    left: 190px;
+    font-size: 60px;
+   }
+   #I{
+    top: 55px;
+    left: 235px;
+    font-size: 60px;
+   }
+   #S3{
+    top: 55px;
+    left: 260px;
+    font-size: 60px;
+   }
+   #T2{
+    top: 55px;
+    left: 300px;
+    font-size: 60px;
+   }
+   #A4{
+    top: 55px;
+    left: 330px;
+    font-size: 60px;
+   }
+   .mayorista-title {
+    font-size: 30px;
+   }
+   .mayorista-article{
+    margin-top: 10%;
+   }
+
+   .mayorista-article p {
+    margin-top: 12%;
+    font-size: 10px;
+    line-height: 15px;
+   }
+   .container-mayorista-foto {
+    width: 70%;
+    margin: 10% auto;
 }
 
-@media screen and (min-width: 769px) {
+   #mayorista-animacion-1, #mayorista-animacion-2, #mayorista-animacion-3,
+#mayorista-animacion-4, #mayorista-animacion-5, #mayorista-animacion-6,
+ #mayorista-animacion-7, #mayorista-animacion-8, #mayorista-animacion-9 , #mayorista-animacion-10  {
+    width: 35px;
+    height: 50px;
+}
+#mayorista-animacion-1,#mayorista-animacion-3,
+#mayorista-animacion-5,#mayorista-animacion-7,
+#mayorista-animacion-9  {
+   top: 385px;
+   left: 233px;
+}
+#mayorista-animacion-2,#mayorista-animacion-4,
+#mayorista-animacion-6,#mayorista-animacion-8,
+#mayorista-animacion-10  {
+   top: 385px;
+   left: 270px;
+}
+
+#mayorista-animacion-11{
+   top: 385px;
+   left: 230px;
+   width: 75px;
+    height: 50px;
+}
+ /**  Nosotras **/
+
+ .banner-container-NOSOTRAS {
+    height: 160px;
+   }
+   .fondonosotras {
+    width: 100%;
+    margin: -19% 0% 0% 0%;
+   }
+   #N{
+    left:5px;
+    top: 112px;
+    font-size: 50px;
+   }
+   #O {
+    left: 45px;
+    top: 112px;
+    font-size: 50px;
+   }
+   #S{
+    left: 85px;
+    top: 112px;
+    font-size: 50px;
+   }
+   #O2 {
+    left: 115px;
+    top: 112px;
+    font-size: 50px;
+   }
+   #T{
+    left: 155px;
+    top: 112px;
+    font-size: 50px;
+   }
+   #R{
+    left: 185px;
+    top: 112px;
+    font-size: 50px;
+   }
+   #A2{
+    left: 220px;
+    top: 112px;
+    font-size: 50px;
+   }
+   #S2{
+    left: 255px;
+    top: 112px;
+    font-size: 50px;
+   }
+   .nosotras-article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5% auto;
+}
+   .titulo-nosotras {
+    font-size: 30px;
+   }
+   .nosotras-parraf {
+    line-height: 20px;
+    font-size: 16px;
+   }
+   .foto-container-nosotras {
+    width: 100%;
+    height: 320px;
+   }
+   .nosotras-parraf-2 {
+    text-align: center;
+    font-family: roboto;
+    font-size: 16px;
+    line-height: 20px;
+    width: 70%;
+    margin: auto;
+   }
+   .nosotras-parraf-3 {
+    text-align: center;
+    font-family: roboto;
+    font-size: 16px;
+    line-height: 24px;
+    width: 70%;
+    margin: auto;
+   }
+   .foto-container-nosotras-cuadrado {
+    width: 95%;
+    height: 222px;
+    margin: 10% auto;
+   }
+   .texto-derecha, .textoizquierda {
+    width: 100%;
+    margin: auto;
+}
+   #container-foto-media-query {
+       width: 70%;
+   }
+
+   .img-nosotras-2 {
+    margin-top: 80px;
+}
+.foto-container-nosotras-cuadrado img {
+    width: 129%;
+}
+}
+
+@media screen and (min-width: 767px) {
     
     /*** Header ***/
     .logo {
         padding: .5em;
     }
-
+    .fixheader{
+        height: 100px;
+    }
     .header-center {
         height: 100%;
         display: flex;
@@ -2175,38 +2652,47 @@ footer {
     #M{
         top: 85px;
         left: 20px;
+        font-size: 120px;
        }
        #A3{
         top: 85px;
         left: 125px;
+        font-size: 120px;
        }
        #Y{
         top: 85px;
         left: 195px;
+        font-size: 120px;
        }
        #O3{
         top: 85px;
         left: 275px;
+        font-size: 120px;
        }
        #R2{
         top: 85px;
         left: 370px;
+        font-size: 120px;
        }
        #I{
         top: 85px;
         left: 455px;
+        font-size: 120px;
        }
        #S3{
         top: 85px;
         left: 510px;
+        font-size: 120px;
        }
        #T2{
         top: 85px;
         left: 590px;
+        font-size: 120px;
        }
        #A4{
         top: 85px;
         left: 655px;
+        font-size: 120px;
        }
        .mayorista-title {
         font-size: 40px;
@@ -2230,18 +2716,18 @@ footer {
    #mayorista-animacion-1,#mayorista-animacion-3,
    #mayorista-animacion-5,#mayorista-animacion-7,
    #mayorista-animacion-9  {
-       top: 615px;
+       top: 680px;
        left: 465px;
    }
    #mayorista-animacion-2,#mayorista-animacion-4,
    #mayorista-animacion-6,#mayorista-animacion-8,
    #mayorista-animacion-10  {
-       top: 615px;
+       top: 680px;
        left: 552px;
    }
 
    #mayorista-animacion-11{
-       top: 615px;
+       top: 680px;
        left: 465px;
        width: 170px;
         height: 100px;
@@ -2258,35 +2744,49 @@ footer {
    #N{
     left:20px;
     top: 100px;
+    FONT-SIZE: 120PX;
    }
    #O {
     left: 113px;
     top: 100px;
+    FONT-SIZE: 120PX;
    }
    #S{
     left: 210px;
     top: 100px;
+    FONT-SIZE: 120PX;
    }
    #O2 {
     left: 285px;
     top: 100px;
+    FONT-SIZE: 120PX;
    }
    #T{
     left: 385px;
     top: 100px;
+    FONT-SIZE: 120PX;
    }
    #R{
     left: 455px;
     top: 100px;
+    FONT-SIZE: 120PX;
    }
    #A2{
     left: 545px;
     top: 100px;
+    FONT-SIZE: 120PX;
    }
    #S2{
     left: 630px;
     top: 100px;
+    FONT-SIZE: 120PX;
    }
+   .nosotras-article {
+    display: flex;
+    flex-direction: ROW;
+    justify-content: space-between;
+    margin: 5% auto;
+}
    .titulo-nosotras {
     font-size: 30px;
    }
@@ -2294,7 +2794,7 @@ footer {
     line-height: 20px;
    }
    .foto-container-nosotras {
-    width: 40%;
+    width: 65%;
     height: 300px;
     margin-top: 10%;
    }
@@ -2315,8 +2815,9 @@ footer {
     margin: auto;
    }
    .foto-container-nosotras-cuadrado {
-    width: 40%;
+    width: 65%;
     height: 200px;
+    margin-top: 15%;
    }
    #container-foto-media-query {
        width: 70%;
@@ -2328,6 +2829,53 @@ footer {
 .foto-container-nosotras-cuadrado img {
     width: 129%;
 }
+/* ------------- FAQ----------------- */
+
+.banner-container-FAQ {
+    height: 230px;
+   }
+   .tituloFAQ{
+    font-size: 40px;
+ }
+ #F {
+     left: 455px;
+     font-size: 140px;
+     top: 70px;
+ }
+ #A{
+     left: 535px;
+     font-size: 140px;
+     top: 70px;
+ }
+ #Q{
+     left: 625px;
+     top: 75px;
+     font-size: 130px;
+ }
+ 
+ .FAQquestions {
+    width: 90%;
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    font-family: roboto;
+}
+ .FAQarticles {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 3% auto;
+}
+ .articletitle {
+    margin-left: 0px;
+ }
+
+ .FAQarticles p {
+    font-size: 16px;
+    width: 90%;
+    line-height: 25px;
+    margin: auto 10%;
+ }
     /**  Detalle  **/
 
     .imagenes{
@@ -2847,5 +3395,422 @@ flex-direction: row;
     font-size: larger;
 }
 
+/* ------------- FAQ----------------- */
+
+.banner-container-FAQ {
+    width: 100%;
+    height: 315px;
+    overflow: hidden;
+    box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+   }
+ .fondofaq {
+    width: 100%;
+    margin: -30% 0% 0% 0%;
+    box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+ }
+ .letrablanca ,.letranegra {
+     position: absolute;
+     font-size: 220px;
+     top: 15px;
+     font-family: 'Lexend Deca', sans-serif;
+     text-shadow: 0px 3px 3px rgba(0,0,0,0.52);
+ }
+ .letranegra {
+     color: black;
+ }
+ .letrablanca {
+     color: white;
+ }
+ #F {
+     left: 615px;
+     font-size: 200px;
+     top: 30px;
+ }
+ #A{
+     left: 715px;
+     font-size: 200px;
+     top: 30px;
+ }
+ #Q{
+     left: 840px;
+     top: 55px;
+     font-size: 175px;
+ }
+ .FAQtitle {
+    display: flex;
+    margin: 6% 5%;
+    justify-content: space-around;
+ }
+ .tituloFAQ{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    margin-top: 6%;
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+ }
+ .clipimg {
+     width: 50%;
+ }
+ .clipimg img {
+    width: 70%;
+    margin-left: 15%;
+    
+ }
+ .FAQquestions {
+    width: 90%;
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    font-family: roboto;
+}
+ .FAQarticles {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 3% auto;
+}
+ .articletitle {
+    display: flex;
+    flex-direction: row;
+    margin-left: 100px;
+ }
+ .articletitle i{
+    font-size: 30px;
+    margin-top: 25px;
+ }
+ .articletitle h3 {
+    font-size: 25px;
+    font-weight: bolder;
+    margin-left: 25px;
+ }
+ .FAQarticles p {
+    font-size: 16px;
+    width: 60%;
+    line-height: 30px;
+    margin: auto;
+ }
+
+ /* ------------- NOSOTRAS----------------- */
+
+ .banner-container-NOSOTRAS {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+   }
+   .fondonosotras {
+    width: 107%;
+    margin: -22% 0% 0% -7%;
+   }
+   #N{
+    left:0px;
+    top: 160px;
+    font-size: 180px;
+   }
+   #O {
+    left: 135px;
+    top: 160px;
+    font-size: 180px;
+   }
+   #S{
+    left: 285px;
+    top: 160px;
+    font-size: 180px;
+   }
+   #O2 {
+    left: 410px;
+    top: 160px;
+    font-size: 180px;
+   }
+   #T{
+    left: 548px;
+    top: 160px;
+    font-size: 180px;
+   }
+   #R{
+    left: 655px;
+    top: 160px;
+    font-size: 180px;
+   }
+   #A2{
+    left: 785px;
+    top: 160px;
+    font-size: 180px;
+   }
+   #S2{
+    left: 910px;
+    top: 160px;
+    font-size: 180px;
+   }
+   .container-nosotras {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 10% auto;
+   }
+   .nosotras-article {
+    display: flex;
+    justify-content: space-between;
+    margin: 5% auto;
+   }
+   .texto-derecha, .textoizquierda {
+    width: 50%;
+    margin: 1% auto;
+   }
+   .texto-izquierda{
+       margin-top: 60px;
+   }
+   .titulo-nosotras {
+    text-align: center;
+    font-family: roboto;
+    font-weight: bolder;
+    font-size: 40px;
+    text-shadow: 0px 1px 1px rgba(0,0,0,0.3);
+   }
+   .nosotras-parraf {
+    text-align: center;
+    font-family: roboto;
+    font-size: 16px;
+    line-height: 30px;
+    width: 70%;
+    margin: auto;
+   }
+   .foto-container-nosotras {
+    width: 35%;
+    height: 375px;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 100%;
+   }
+   .nosotras-parraf-2 {
+    text-align: center;
+    font-family: roboto;
+    font-size: 16px;
+    line-height: 20px;
+    width: 70%;
+    margin: auto;
+   }
+   .nosotras-parraf-3 {
+    text-align: center;
+    font-family: roboto;
+    font-size: 16px;
+    line-height: 24px;
+    width: 70%;
+    margin: auto;
+   }
+   .foto-container-nosotras-cuadrado {
+    width: 35%;
+    height: 250px;
+    overflow: hidden;
+    margin: 5% auto;
+    border-radius: 19%;
+   }
+   .img-nosotras-1 {
+       width: 105%;
+       margin-top: 100px;
+   }
+   .img-nosotras-2 {
+    width: 100%;
+    margin-top: 43px;
+}
+.foto-container-nosotras-cuadrado img {
+    width: 135%;
+}
+
+/* ------------- MAYORISTA ----------------- */
+
+.banner-container-MAYORISTA {
+    width: 100%;
+    height: 310px;
+    overflow: hidden;
+    box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+   }
+
+   .fondomayorista {
+    width: 100%;
+    margin: -11% 0% 0% 0%;
+    box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+   }
+   #M{
+    top: 85px;
+    left: 15px;
+    font-size: 160px;
+   }
+   #A3{
+    top: 85px;
+    left: 155px;
+    font-size: 160px;
+   }
+   #Y{
+    top: 85px;
+    left: 255px;
+    font-size: 160px;
+   }
+   #O3{
+    top: 85px;
+    left: 360px;
+    font-size: 160px;
+   }
+   #R2{
+    top: 85px;
+    left: 490px;
+    font-size: 160px;
+   }
+   #I{
+    top: 85px;
+    left: 610px;
+    font-size: 160px;
+   }
+   #S3{
+    top: 85px;
+    left: 690px;
+    font-size: 160px;
+   }
+   #T2{
+    top: 85px;
+    left: 800px;
+    font-size: 160px;
+   }
+   #A4{
+    top: 85px;
+    left: 890px;
+    font-size: 160px;
+   }
+   .container-mayorista {
+    width: 90%;
+    margin: 10% auto;
+    display: flex;
+    flex-direction: column;
+   }
+   .mayorista-title {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    font-size: 40px;
+    font-family: roboto;
+    font-weight: bolder;
+   }
+   .mayorista-article{
+   display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+   }
+   .mayorista-article p {
+    width: 50%;
+    margin-top: 12%;
+    margin-right: 7%;
+    text-align: center;
+    font-size: 25px;
+    font-family: roboto;
+    line-height: 25px;
+   }
+   .container-mayorista-foto {
+    width: 70%;
+    margin: auto;
+   }
+   .container-mayorista-foto img{
+    width: 100%;
+    border-radius: 5%;
+    box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+   }
+
+   #mayorista-animacion-1, #mayorista-animacion-2, #mayorista-animacion-3,
+    #mayorista-animacion-4, #mayorista-animacion-5, #mayorista-animacion-6,
+     #mayorista-animacion-7, #mayorista-animacion-8, #mayorista-animacion-9 , #mayorista-animacion-10  {
+        width: 80px;
+        height: 110px;
+        opacity: 0;
+        box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+   }
+   #mayorista-animacion-1,#mayorista-animacion-3,
+   #mayorista-animacion-5,#mayorista-animacion-7,
+   #mayorista-animacion-9  {
+       position: absolute;
+       top: 780px;
+       left: 645px;
+   }
+   #mayorista-animacion-2,#mayorista-animacion-4,
+   #mayorista-animacion-6,#mayorista-animacion-8,
+   #mayorista-animacion-10  {
+       position: absolute;
+       top: 780px;
+       left: 745px;
+   }
+
+   #mayorista-animacion-1,#mayorista-animacion-2{
+       animation: animacion1 30s infinite;
+       transition: ease-in-out;
+   }
+   @keyframes animacion1 {
+       3% {opacity: 0;}
+       8% {opacity: 1;}
+       18% {opacity: 1;}
+       21% {opacity: 0;}
+       
+   }
+   
+   #mayorista-animacion-3, #mayorista-animacion-4{
+    animation: animacion2 30s infinite;
+    transition: ease-in-out;
+}
+@keyframes animacion2 {
+    22% {opacity: 0;}
+    25% {opacity: 1;}
+    35% {opacity: 1;}
+    38% {opacity: 0;}
+    
+}
+#mayorista-animacion-5, #mayorista-animacion-6{
+    animation: animacion3 30s infinite;
+    transition: ease-in-out;
+}
+@keyframes animacion3 {
+    40% {opacity: 0;}
+    42% {opacity: 1;}
+    52% {opacity: 1;}
+    55% {opacity: 0;}
+    
+}
+#mayorista-animacion-7, #mayorista-animacion-8{
+    animation: animacion4 30s infinite;
+    transition: ease-in-out;
+}
+@keyframes animacion4 {
+    56% {opacity: 0;}
+    59% {opacity: 1;}
+    69% {opacity: 1;}
+    72% {opacity: 0;}
+    
+}
+#mayorista-animacion-9, #mayorista-animacion-10{
+    animation: animacion5 30s infinite;
+    transition: ease-in-out;
+}
+@keyframes animacion5 {
+    73% {opacity: 0;}
+    76% {opacity: 1;}
+    86% {opacity: 1;}
+    89% {opacity: 0;}
+    
+}
+#mayorista-animacion-11{
+    animation: animacion6 30s infinite;
+    transition: ease-in-out;
+    position: absolute;
+       top: 780px;
+       left: 647px;
+       width: 170px;
+        height: 110px;
+        opacity: 0;
+        box-shadow: 0px 5px 11px -3px rgba(0,0,0,0.85);
+}
+@keyframes animacion6 {
+    90% {opacity: 0;}
+    93% {opacity: 1;}
+    100% {opacity: 1;}
+    101% {opacity: 0;}
+    
+}
 
 }
