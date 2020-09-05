@@ -8,51 +8,113 @@
 </head>
 <body>
     <%- include('./partials/header') %>
-    <div class="slider">
-        <ul>
-            <li><img src="Images/Fondos/fondo2.jpg"> </li>
-            <li><img src="Images/Fondos/fondo1.jpg"></li>
-            <li><img src="Images/Fondos/fondo3.jpg"></li>
-        </ul>
-    </div>
-    <img class="animacion1" src="/Images/frases/Mr.jpg">
-    <img class="animacion2" src="/Images/frases/Mrs.jpg">
-    <p id="animacion3"> Bienvenido al</p>
-    <p id="animacion4"> Mundo Deco</p>
-    <img class="animacion5" src="/Images/animales/Buho.jpg">
-    <img class="animacion9" src="/Images/animales/portaretrato-girafa.jpg">
-    <img class="animacion10" src="/Images/animales/elefante-en-fondo-negro.jpg">
-    <img class="animacion11" src="/Images/arte/organico1.jpg">
-    <img class="animacion12" src="/Images/arte/organico2.jpg">
-
-    <div class="most-sale-container">
-        <div class="most-sale-title">
-            <h2>Los Mas Vendidos</h2>
-            <a href="/mostSale">ver todos</a>
-        </div>
-        <div class="carrousel-container">
-            <div class="botonatras">&#60</div>
-        <% mostsale.forEach(function(product){%>
-          
-                <div class="section-container">
-                    <section class="most-sale-section">
-                        <img src="/images/masvendidos/<%=product.image%>" alt="imagen del producto">
-                        <article class="infomasvendidos">
-                            <h3><%=product.name%></h3>
-                            <h2>$<%=product.price[1]%></h2>
-                    </article>
-            </section>
-                </div>
+    <div class="banner-container"> 
+        <img class="fondo" src="/images/414.jpg" alt="">
+       </div>
+       <img class="marco" src="/images/marco_Color_madera.PNG">
+       <img class="logo-banner" src="/images/logoNegro.png" alt="">
+       <h2 class="frase1">UNA NUEVA FORMA</h2>
+       <h2 class="frase2">DE DECORAR TU HOGAR</h2>
+       <div class="carousel-title">
+           <h2 class="titulomasvendidos"> Los Mas Vendidos</h2>
+           <a class="vermasvendidos" href="#">ver mas</a>
+       </div>
+       <div class="carousel">
+           <i id="leftarrow" class="fas fa-arrow-circle-left"></i>
+           <i  id="rightarrow" class="fas fa-arrow-circle-right"></i>
+           <ul>
+               <li class="articulo">
+                   <img class="producto" src="/images/Animales/buho.jpg" alt="">
+                   <h3 class="titulo"> BUHO OJO CELESTE</h3>
+                   <P class="PRECIO"> $2.500</P>
+               </li>
+               <li class="articulo">
+                   <img class="producto" src="/images/Animales/buho.jpg" alt="">
+                   <h3 class="titulo"> BUHO OJO CELESTE</h3>
+                   <P class="PRECIO"> $2.500</P>
+               </li>
+               <li class="articulo">
+                   <img class="producto" src="/images/Animales/buho.jpg" alt="">
+                   <h3 class="titulo"> BUHO OJO CELESTE</h3>
+                   <P class="PRECIO"> $2.500</P>
+               </li>
+               <li class="articulo">
+                   <img class="producto" src="/images/Animales/buho.jpg" alt="">
+                   <h3 class="titulo"> BUHO OJO CELESTE</h3>
+                   <P class="PRECIO"> $2.500</P>
+               </li>
+               <li class="articulo">
+                   <img class="producto" src="/images/Animales/buho.jpg" alt="">
+                   <h3 class="titulo"> BUHO OJO CELESTE</h3>
+                   <P class="PRECIO"> $2.500</P>
+               </li>
+               <li class="articulo">
+                   <img class="producto" src="/images/Animales/buho.jpg" alt="">
+                   <h3 class="titulo"> BUHO OJO CELESTE</h3>
+                   <P class="PRECIO"> $2.500</P>
+               </li>
+               <li class="articulo">
+                   <img class="producto" src="/images/Animales/buho.jpg" alt="">
+                   <h3 class="titulo"> BUHO OJO CELESTE</h3>
+                   <P class="PRECIO"> $2.500</P>
+               </li>
+               <li class="articulo">
+                   <img class="producto" src="/images/Animales/buho.jpg" alt="">
+                   <h3 class="titulo"> BUHO OJO CELESTE</h3>
+                   <P class="PRECIO"> $2.500</P>
+               </li>
+               <li class="articulo">
+                   <img class="producto" src="/images/Animales/buho.jpg" alt="">
+                   <h3 class="titulo"> BUHO OJO CELESTE</h3>
+                   <P class="PRECIO"> $2.500</P>
+               </li>
+   
+           </ul>
+       </div>
+       <div class="categorias-title">
+           <h2 class="titulocategoria"> Categorías</h2>  
+       </div>
+       <section class="categorias-stand">
+           <article>
+                   <a class="categoria-link" href="#">
+                       <img class="categoria-foto" src="/images/Animales/Buho.jpg" alt="">
+                           <h2 class="categoria">ANIMALES</h2></a>
+           </article>
+   
+           <article>
+               <a class="categoria-link" href="#">
+                   <img class="categoria-foto" src="/images/arte/caras-lovers.jpg" alt="">
+                       <h2 class="categoria">ARTE</h2></a>
+       </article>
+       <article>
+           <a class="categoria-link" href="#">
+               <img class="categoria-foto" src="/images/botanica/flor-rosa-en-agua.jpg" alt="">
+                   <h2 class="categoria">BOTANICA</h2></a>
+   </article>
+   <article>
+       <a class="categoria-link" href="#">
+           <img class="categoria-foto" src="/images/Ciudades/downtown-buenos-aires.jpg" alt="">
+               <h2 class="categoria">CIUDADES</h2></a>
+   </article>
+   <article>
+       <a class="categoria-link" href="#">
+           <img class="categoria-foto" src="/images/frases/prada-vertical.jpg" alt="">
+               <h2 class="categoria">FRASES</h2></a>
+   </article>
+   <article>
+       <a class="categoria-link" href="#">
+           <img class="categoria-foto" src="/images/Naturaleza/looking-for-paradise.jpg" alt="">
+               <h2 class="categoria">NATURALEZA</h2></a>
+   </article>
+   <article id="setscombinados-article">
+       <a class="categoria-link" href="#">
+           <img id="setscombinados-img" class="categoria-foto" src="/images/sets-combinados/abstract-organic.jpg" alt="">
+               <h2 id="setscombinados-titulo" class="categoria">SETS <br> COMBINADOS </h2></a>
+   </article>
          
-        <%})%>
-        <div class="botonadelante">&#62</div>
-        </div>  
-    </div>
-    <div class="container-categorias">
-        <h2> Categorias</h2>
-        <section>
-        
-        </section>
+       </section>
+   
+       <script src="/JS/index.js" ></script>
     </div>
     <br>
     <br>
