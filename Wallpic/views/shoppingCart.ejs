@@ -34,7 +34,10 @@
 
             </div>
             <div class="cart-hero-right">
-                <button class="cart-hero-trash"><i class="fas fa-trash"></i></button>
+                <form action="user/deleteFromCart" method="POST">
+                    <input type="hidden" name="cartId" value="<%= cart.id %> ">
+                    <button type="submit" class="cart-hero-trash"><i class="fas fa-trash"></i></button>
+                </form>
             </div>
         
         </div>

@@ -1102,31 +1102,9 @@ header {
     color: black;
 }
 
-/* .sub-menu-1{
-    display: none;
-} */
-
-.color-li a:hover + .sub-menu-1 {
-    display: block;
-    position: relative;
-    margin-top: 15px;
-    text-align: left;
-}
-
 .size-li a{
     text-decoration: none;
     color: black;
-}
-
-/* .sub-menu-2{
-    display: none;
-} */
-
-.size-li a:hover + .sub-menu-2 {
-    display: block;
-    position: relative;
-    margin-top: 15px;
-    text-align: left;
 }
 
 .quantity{
@@ -1140,6 +1118,14 @@ header {
     font-family: var(--secundary-font);
     width: 80%;
     font-size: x-small;
+}
+
+.select-size{
+    border-radius: 5px;
+}
+
+.select-color{
+    border-radius: 5px;
 }
 
 /* Registro aparte */
@@ -3238,32 +3224,12 @@ footer {
     font-size: small;
 }
 
-/* .sub-menu-1{
-    display: none;
-} */
-
-.color-li a:hover + .sub-menu-1 {
-    display: block;
-    position: relative;
-    margin-top: 15px;
-    text-align: left;
-}
 
 .size-li a{
     text-decoration: none;
     color: black;
 }
 
-/* .sub-menu-2{
-    display: none;
-} */
-
-.size-li a:hover + .sub-menu-2 {
-    display: block;
-    position: relative;
-    margin-top: 15px;
-    text-align: left;
-}
 
 /* Category */
 
