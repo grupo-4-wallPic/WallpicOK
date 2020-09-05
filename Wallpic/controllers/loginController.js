@@ -29,9 +29,9 @@ module.exports = {
           //   cart: 5
           // }
 
-          // console.log(user)
+          
           req.session.user = user; // YA ESTÁ EN SESION
-  
+          
           if (req.body.remember) {
             // Creo la cookie
             res.cookie('email', user.email, { maxAge: 1000 * 60 * 60 * 24 });

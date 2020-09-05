@@ -1,4 +1,4 @@
-const {Carts, Purchases} = require = ('../database/models')
+const {Carts, Purchases} = require('../database/models')
 
 module.exports = {
 
@@ -10,7 +10,7 @@ module.exports = {
             }
         })
         .then(carts => {
-            return res.redirect ('/shoppingCart', {carts});
+            return res.render('shoppingCart', {carts});
         })
     },
 
