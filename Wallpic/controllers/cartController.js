@@ -54,7 +54,7 @@ module.exports = {
             },{
                 where: {
                     user_id: req.session.user.id,
-                    state: 1
+                    state: 0
                 }
             })
         })

@@ -1035,6 +1035,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     padding: 5px 0;
+    align-items: center;
 }
 
 .cart-btn-buy {
@@ -1828,6 +1829,12 @@ footer {
 .shopping-title {
     background-color: white;
     text-align: center;
+}
+
+.sub-price, .price-total {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
 }
 
 
