@@ -10,7 +10,7 @@
     <%- include('./partials/header') %>
     <br>
     <div>
-        <h2 class="bienvenida-perfil">Bienvenide Nombre</h2>
+        <h2 class="bienvenida-perfil">Bienvenide <%= user.name %> </h2>
     </div>
     <br>
     <br>
@@ -29,8 +29,10 @@
     <div class="historial-compras">
         <h2>Historial de compras</h2>
         <div class="compra-1">
-        <ul><i class="fas fa-shopping-basket"></i>       Aqui va una compra</ul>
-            <li><a href="">Ver detalle de la compra</a></li>
+        <% purchase.forEach (purchase => { %> 
+        <ul><i class="fas fa-shopping-basket"></i> Compra número: <%= purchase.order_number %> </ul>
+            <li><a href=""> Total: <%= purchase.total %>  </a></li>
+        <% }) %>
         </div>
     </div>
     </div>

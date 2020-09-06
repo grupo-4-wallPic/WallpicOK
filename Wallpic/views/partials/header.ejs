@@ -10,19 +10,28 @@
         </figure>
     </div>
     <div class="header-center">
-        <!-- Searcher -->
-        <form class="nav-search" action="">
-            <button class="nav-search-btn" type="submit"><i class="fas fa-search"></i></button>
-            <input type="text" class="nav-search-input" placeholder="Buscar">
-        </form>
          <!-- Menu -->
         <nav class="menu">
             <ul class="initialbar">
+                <!-- <div class="dropdown-header"> -->
                 <li><a href="/">Inicio</a></li>
-                <li><a href="/category/animales">Categorías</a></li>
+                <li><a class="categorias-header" href="#">Categorías</a>
+                    <div class="sub-menu-header">
+                        <ul class="ul-header">
+                            <li><a href="/category/animales">Animales</a></li>
+                            <li><a href="/category/arte">Arte</a></li>
+                            <li><a href="/category/botanica">Botánica</a></li>
+                            <li><a href="/category/ciudades">Ciudades</a></li>
+                            <li><a href="/category/frases">Frases</a></li>
+                            <li><a href="/category/naturaleza">Naturaleza</a></li>
+                            <li><a href="/category/sets">Sets</a></li>
+                        </ul>
+                    </div>
+                </li>
                 <li><a href="/mayorista">Mayorista</a></li>
                 <li><a href="/nosotras">Nosotras</a></li>
                 <li><a href="/faq">FAQ</a></li>
+            <!-- </div> -->
             </ul>
         </nav>
     </div>
@@ -35,7 +44,7 @@
         <% if (locals.user) { %>
             <form action="/logout" method="POST">
                 <div class="logdata">
-                <a class="logname" id="logname" href="/user" >Hola, <%= locals.user.name %> + <%= locals.user.cart %>! </a>
+                <a class="logname" id="logname" href="/user" >Hola, <%= locals.user.name %> <%= locals.user.cart %>! </a>
                 <button class="logout" id="cerrar" type="submit">Cerrar sesión
                 </button>
             </div>
@@ -56,6 +65,7 @@
     </div>
 </header>
 <div class="fixheader"></div>
+<script src="/JS/header.js"></script>
 </div>
 <%- include('./menu-mobile') %> 
 

@@ -17,7 +17,20 @@ const userController = {
     },
 
     compras: (req, res) => {
-        return res.render ('compras')
+        Purchases.findAll({
+            where:{
+                user_id: req.session.user.id
+            },
+            include: {
+                all: true,
+                nested: true,
+                paranoid: false
+            },
+            order:[['createdAt', 'DESC']]
+        })
+        .then((purchase)=>{
+            res.render ('compras', {purchase})
+        })
     },
 
     favoritos: (req, res) => {
