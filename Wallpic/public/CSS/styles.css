@@ -628,10 +628,6 @@ header {
     justify-content: space-around;
 }
 
-.menu {
-    display: none;
-}
-
 .header-btns-container {
     display: none;
 }
@@ -644,22 +640,6 @@ header {
 
 .logo-header a {
     display: flex;
-}
-
-.nav-search {
-    display: flex;
-}
-
-.nav-search-input {
-    width: 90%;
-    border: none;
-    font-size: 1em;
-}
-
-.nav-search-btn {
-    background-color: white;
-    border: none;
-    cursor: pointer;
 }
 
 .burger-menu,
@@ -683,6 +663,39 @@ header {
         text-decoration: none;
         color: black;
 
+}
+
+.sub-menu-header{
+    display: none ;
+    position: absolute ;
+    padding-top: 2% ;
+    width: fit-content;
+    background-color: var(--light-grey);
+    border-radius: 5%;
+    box-shadow: 0px 4px 12px -1px rgba(0,0,0,0.75);
+    padding: 1%;
+}
+
+.sub-menu-header ul li a{
+    text-decoration: none;
+    padding: 1%;
+}
+
+.initialbar a:hover + .sub-menu-header {
+    display: block;
+    position: absolute;
+}
+
+.initialbar a:hover + .sub-menu-header ul{
+    display: block;
+}
+
+.initialbar a:hover + .sub-menu-header ul li{
+    display: block;
+}
+
+.ul-header :hover li a{
+    display: block;
 }
 
     .modal {
@@ -1199,6 +1212,14 @@ header {
 }
 
 /* Categorias */
+
+.contenedor{
+    display: grid;
+}
+
+.contenedor section {
+    display: flex;
+}
 
 .todo {
     display: flex;

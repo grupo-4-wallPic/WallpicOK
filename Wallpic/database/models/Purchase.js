@@ -12,6 +12,12 @@ module.exports = (sequelize, DataTypes) => {
     
     user_id: DataTypes.INTEGER,
 
+    createdAt: DataTypes.DATE,
+
+    updatedAt: DataTypes.DATE,
+
+    deletedAt: DataTypes.DATE,
+
     },{tableName: "PURCHASE"});
     
     return Purchase;
