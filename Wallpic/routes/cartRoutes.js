@@ -4,6 +4,7 @@ const routes = express.Router()
 const cartController = require('../controllers/cartController')
 
 routes.get('/', cartController.cart)
+routes.post('/delete', cartController.deleteFromCart)
 
 
 module.exports = routes

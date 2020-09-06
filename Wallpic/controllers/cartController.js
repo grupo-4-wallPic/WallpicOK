@@ -20,7 +20,7 @@ module.exports = {
                 id: req.body.cartId
             }
         })
-        .then(()=>{ res.redirect('/shoppingCart')})
+        .then(()=>{ res.redirect('/cart')})
     },
 
     shop: (req, res) => {
