@@ -65,12 +65,13 @@
                                 <li class="size-li">
                                     <a href="#">Tamaño</a>
                                     <div class='sub-menu-2'>
-                                        <select class="select-size" name="checkSize" id="size">
+                                        <select class="select-size" name="check" id="size" value="">
                                             <% sizes.forEach(size => { %>
                                             <option class="size-input" id="<%= size.price %>" value="<%= size.price %>,<%= size.size %>"><%= size.size %></option>
                                             <% }); %>
                                         </select>
                                         <input class="checkPrice" type="hidden" name="checkPrice" value="">
+                                        <input class="checkSize" type="hidden" name="checkSize" value="">
                                     </div>
                                 </li>
                             </ul>
