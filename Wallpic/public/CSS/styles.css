@@ -1212,6 +1212,14 @@ header {
 
 /* Categorias */
 
+.contenedor{
+    display: grid;
+}
+
+.contenedor section {
+    display: flex;
+}
+
 .todo {
     display: flex;
     flex-wrap: wrap;
