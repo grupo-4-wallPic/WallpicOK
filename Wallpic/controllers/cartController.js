@@ -34,7 +34,7 @@ module.exports = {
         })
         .then(carts => {
             carts.forEach(cart => {
-                totalPrice = totalPrice + cart.price
+                totalPrice += cart.price
             });
             return Purchases.findOne({
                 order: [['createdAt', 'DESC']]
@@ -59,7 +59,7 @@ module.exports = {
             })
         })
         .then(() => {
-            res.redirect('user')
+            res.redirect('/')
         })
     }
 
