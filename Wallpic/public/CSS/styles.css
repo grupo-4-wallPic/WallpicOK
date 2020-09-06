@@ -686,6 +686,10 @@ header {
     position: absolute;
 }
 
+.categorias-header {
+    cursor: pointer;
+}
+
 .initialbar a:hover + .sub-menu-header ul{
     display: block;
 }
@@ -2812,7 +2816,7 @@ footer {
     }
     
     .menu ul {
-        display: flex;
+        /* display: flex; */
         flex-direction: row;
         width: 90%;
         margin: 0;
