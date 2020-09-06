@@ -10,10 +10,10 @@
     <div class="contenedor">
         <%- include('./partials/header') %>
         <div class='categoria'>
-            <h2 class="category-title">  </h2>
+            <h2 class="category-title"> </h2>
         </div>
-        <div class='todo'>
         <% product.forEach(product => { %>
+        <div class='todo'>
             <div class="prod">
 				<section class="product">
                     <a class="link" href="/products/<%= product.id %>">
@@ -25,15 +25,15 @@
                         </div>  
 						<article class="product-box">
                             <h2 class="nombre"><%= product.name %> </h2>
-							<p class="precio"> $<%= product.price[0] %> - $<%= product.price[4] %> </p>
+							<p class="precio"> $<%= product.price %> - $<%= product.price %> </p>
                         </article>
                         </div>
                         <input type="hidden" name="categoryId" id="categoryId" value="<%= product.categoryId %> ">
                     </a>
 				</section>
-			</div>
-        <% }); %> 
+			</div> 
         </div>
+        <% }); %>
         <br>
         <br>
         <br>

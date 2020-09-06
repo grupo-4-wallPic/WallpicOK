@@ -1,6 +1,3 @@
-const fs = require ('fs');
-const leerJson = fs.readFileSync('productsWallpicDataBase.json', {encoding: 'utf-8'})
-const products = JSON.parse (leerJson);
 const {Categories, Products} = require ('../database/models')
 
 module.exports = {
@@ -11,11 +8,11 @@ module.exports = {
             }
         })
         .then(category => {
-            Products.findAll({
+            return Products.findAll({
                 where: {
                     categoryId: category.id
                 }
-            })
+            });
         })
         .then(product => {
            return res.render('category', {product})

@@ -681,16 +681,16 @@ header {
     padding: 1%;
 }
 
-.initialbar :hover + .sub-menu-header {
+.initialbar a:hover + .sub-menu-header {
     display: block;
     position: absolute;
 }
 
-.initialbar :hover + .sub-menu-header ul{
+.initialbar a:hover + .sub-menu-header ul{
     display: block;
 }
 
-.initialbar :hover + .sub-menu-header ul li{
+.initialbar a:hover + .sub-menu-header ul li{
     display: block;
 }
 
