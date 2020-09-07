@@ -23,8 +23,5 @@ module.exports = {
         // })
 
         // return res.render('category', {animales})
-    }
-
-
-    
+    }    
 }

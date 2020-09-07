@@ -8,19 +8,24 @@
 </head>
 <body>
     <%- include('./partials/header') %>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <div class="contenedor">
         <div class='categoria'>
             <h2 class="category-title"></h2>
         </div>
         <% product.forEach(product => { %>
-        <div class='todo'>
+        <div class="todo">
             <div class="prod">
 				<section class="product">
                     <a class="link" href="/products/<%= product.id %>">
                         <div class='desvanecer'>
                         <div class='img-container'>
 						<figure class="image">
-							<img src="<%= product.images %>" alt="imagen de <%= product.name %>">
+							<img src="/Images/products/<%= product.images %>" alt="imagen de <%= product.name %>">
                         </figure>
                         </div>  
 						<article class="product-box">
@@ -28,19 +33,18 @@
 							<p class="precio"> $590 - $2990 </p>
                         </article>
                         </div>
-                        <input type="hidden" name="categoryId" id="categoryId" value="<%= product.categoryId %> ">
                     </a>
+                    <input type="hidden" name="categoryId" id="categoryId" value="<%= product.categoryId %> ">
 				</section>
 			</div> 
         </div>
         <% }); %>
-        <br>
-        <br>
-        <br>
-        <br>
-
-         
     </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <%- include('./partials/footer') %>
 </body>
 </html>
