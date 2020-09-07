@@ -3502,8 +3502,9 @@ footer {
 
 .prod {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
-    width: 280px;
+    flex-direction: inherit;
 }
 
 .product {
