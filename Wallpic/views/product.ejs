@@ -40,8 +40,8 @@
                     <div class='seleccion'>
                         <div class='product-txt'>
                             <p><%= product.name %> </p>
-                            <h2 class="main-price"><%= sizes[0].price %> </h2>
-                            <p>Medios de pago</p>
+                            <h2 class="main-price">$<%= sizes[0].price %> </h2>
+                            <p id="medio-de-pago-tag">Medios de pago</p>
                         </div>
                         <div class='tarjetas'>
                             <i class="fab fa-cc-visa"></i>
@@ -76,7 +76,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div>
+                        <div class="add-to-cart-button-container">
                             <!-- <label for="quantity">Cantidad</label>
                             <input type="number" id="quantity" class="quantity" name="checkQuantity" value="1"> -->
                             <input type="hidden" name="checkName" value="<%= product.name %>">
@@ -94,11 +94,6 @@
             <h2 class='descripcion-footer'> <br> </h2>
         </section>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
         <br>
         <br>
 

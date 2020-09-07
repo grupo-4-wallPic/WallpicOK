@@ -44,7 +44,7 @@
         <% if (locals.user) { %>
             <form action="/logout" method="POST">
                 <div class="logdata">
-                <a class="logname" id="logname" href="/user" >Hola, <%= locals.user.name %></a>
+                <a class="logname" id="logname" href="/user" >Hola, <%= locals.user.name %> <strong>!</strong></a>
                 <button class="logout" id="cerrar" type="submit">Cerrar sesión
                 </button>
             </div>
