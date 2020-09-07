@@ -36,7 +36,7 @@ const registerController = {
 
         })
         .then(() => {
-            return res.redirect('/')  
+            return res.redirect('/login')  
            })
         
         // users.createNewData(nuevoUsuario)
