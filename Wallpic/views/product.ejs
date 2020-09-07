@@ -13,77 +13,78 @@
         <br>
         <br>
         <section class="product-info">
-                <article class='imagenes'>
-                    <div class='img-extra'>
-                        <figure>
-                            <a href="#">
-                        <img src="/Images/products/<%=product.images %> " alt=""> 
-                            </a>
-                        </figure>
-                        <figure>
-                            <a href="#">
-                            <img src="/Images/products/<%=product.images %> " alt=""> 
-                            </a>
-                        </figure>
-                        <figure>
-                            <a href="#">
-                            <img src="/Images/products/<%=product.images %> " alt=""> 
-                            </a>
-                        </figure>
-                    </div>
-                    <div class='img-principal'>
-                        <figure>
+            <article class='imagenes'>
+                <div class='img-extra'>
+                    <figure>
+                        <a href="#">
                             <img src="/Images/products/<%=product.images %> " alt="">
-                        </figure>
-                    </div>
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="#">
+                            <img src="/Images/products/<%=product.images %> " alt="">
+                        </a>
+                    </figure>
+                    <figure>
+                        <a href="#">
+                            <img src="/Images/products/<%=product.images %> " alt="">
+                        </a>
+                    </figure>
+                </div>
+                <div class='img-principal'>
+                    <figure>
+                        <img src="/Images/products/<%=product.images %> " alt="">
+                    </figure>
+                </div>
                 <div class="contenedor-flex">
                     <div class='seleccion'>
                         <div class='product-txt'>
                             <p><%= product.name %> </p>
-                            <h2 class="main-price">$590.00</h2> 
+                            <h2 class="main-price"><%= sizes[0].price %> </h2>
                             <p>Medios de pago</p>
                         </div>
                         <div class='tarjetas'>
                             <i class="fab fa-cc-visa"></i>
                             <i class="fab fa-cc-mastercard"></i>
-                            <i class="fab fa-cc-amex"></i>  
+                            <i class="fab fa-cc-amex"></i>
                         </div>
-                    </div> 
+                    </div>
                     <form action="/user/addToCart" method="POST" class="product-form">
-                    <div class='dropdowns'>
-                        <ul>
-                            <li class="color-li">
-                                <a href="#">Marco</a>
-                                <div class='sub-menu-1'>
-                                <select class="select-color" name="color" id="color">
-                                <% colors.forEach(color => { %>
-                                        <option value="<%= color.color %> "><%= color.color %> </option>   
-                                <% }); %> 
-                                </select>
-                            </div>
-                            </li>
-                            <li class="size-li">
-                                <a href="#">Tamaño</a>
-                                <div class='sub-menu-2'>
-                                <select class="select-size" name="size" id="size">
-                                <% sizes.forEach(size => { %>
-                                        <option class="size-input" value="<%= size.size %> "><%= size.size %></option>
-                                <% }); %>
-                                </select>
-                                <input class="checkPrice" type="hidden" name="checkPrice" value="">
-                            </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <label for="quantity">Cantidad</label>
-                        <input type="number" id="quantity" class="quantity" name="checkQuantity" value="1">
-                        <input type="hidden" name="checkName" value="<%= product.name %>">
-                        <input type="hidden" name="checkImage" value="<%= product.images %>">
-                        <button type="submit" class='add-to-cart-main'>Agregar al carrito</button>
-                    </div>
+                        <div class='dropdowns'>
+                            <ul>
+                                <li class="color-li">
+                                    <a href="#">Marco</a>
+                                    <div class='sub-menu-1'>
+                                        <select class="select-color" name="checkColor" id="color">
+                                            <% colors.forEach(color => { %>
+                                            <option value="<%= color.color %>"><%= color.color %> </option>
+                                            <% }); %>
+                                        </select>
+                                    </div>
+                                </li>
+                                <li class="size-li">
+                                    <a href="#">Tamaño</a>
+                                    <div class='sub-menu-2'>
+                                        <select class="select-size" name="check" id="size" value="">
+                                            <% sizes.forEach(size => { %>
+                                            <option class="size-input" id="<%= size.price %>" value="<%= size.price %>,<%= size.size %>"><%= size.size %></option>
+                                            <% }); %>
+                                        </select>
+                                        <input class="checkPrice" type="hidden" name="checkPrice" value="<%= sizes[0].price %> ">
+                                        <input class="checkSize" type="hidden" name="checkSize" value="">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <!-- <label for="quantity">Cantidad</label>
+                            <input type="number" id="quantity" class="quantity" name="checkQuantity" value="1"> -->
+                            <input type="hidden" name="checkName" value="<%= product.name %>">
+                            <input type="hidden" name="checkImage" value="<%= product.images %>">
+                            <button type="submit" class='add-to-cart-main'>Agregar al carrito</button>
+                        </div>
                 </div>
-                </article>
+            </article>
             </form>
         </section>
         <div class='descripcion-contenedor'>
@@ -106,21 +107,21 @@
             <div class='contenedor-related'>
                 <section class="prod-related">
                     <figure class='img-related-1'>
-                        <img src="<%= product.image %> " alt="">
+                        <img src="/Images/products/image-1599431202764.jpg" alt="">
                     </figure>
                     <figure class='img-related-2'>
-                        <img src="<%= product.image %>" alt="">
+                        <img src="/Images/products/image-1599431231566.jpg" alt="">
                     </figure>
                 </section>
                 <section class='txt-related'>
                     <article class='txt-related-1'>
-                        <p><%= product.name %> </p>
-                        <h2>$ <%= product.price %> </h2>
+                        <p> Couple of deers </p>
+                        <h2>$590</h2>
                         <button class='add-to-cart'>Agregar al carrito</button>
                     </article>
                     <article class='txt-related-2'>
-                        <p><%= product.name %> </p>
-                        <h2>$ <%= product.price %> </h2>
+                        <p> Portrait of a giraffe </p>
+                        <h2>$590</h2>
                         <button class='add-to-cart'>Agregar al carrito</button>
                     </article>
                 </section>

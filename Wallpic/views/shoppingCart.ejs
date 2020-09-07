@@ -24,17 +24,17 @@
             <div class="cart-hero-center">
                 <h4><%= cart.title %> </h4>
                 <p>medida: <%= cart.size %> </p>
-                <p>precio unidad: $<%= cart.price %> </p>
-                <p class="cart-price">precio</p>
-                <form action="cart-hero-quantity">
+                <p>precio unidad: $<span class="unity-price"><%= cart.price %></span></p>
+                <p class="cart-price">precio: $<strong class="price-change"><%= cart.price %></strong></p>
+                <div>
                     <button class="cart-hero-center-minus"><i class="fas fa-minus"></i></button>
-                    <input type="text">
+                    <input type="text" class="quantity-change" value="1">
                     <button class="cart-hero-center-plus"><i class="fas fa-plus"></i></button>
-                </form>
+                </div>
 
             </div>
             <div class="cart-hero-right">
-                <form action="user/deleteFromCart" method="POST">
+                <form action="/cart/delete" method="POST">
                     <input type="hidden" name="cartId" value="<%= cart.id %> ">
                     <button type="submit" class="cart-hero-trash"><i class="fas fa-trash"></i></button>
                 </form>
@@ -48,31 +48,35 @@
     <section class="shopping-cart-last">
         <div class="cart-half shopping-border">
             <h3>Subtotal(sin envío)</h3>
-            <p class="price">precio</p>
+            <p class="sub-price"></p>
         </div>
         <hr>
         <div class="cart-calculate shopping-border">
             <h3>Calculá el envío</h3>
             <div class="cart-calculate-postal">
 
-                <form action="">
-                    <button><i class="fas fa-truck"></i></button>
-                    <input type="text" placeholder="Ingresá tu CP">
-                </form>
+                <div>
+                    <button class="postal-btn"><i class="fas fa-truck"></i></button>
+                    <input class="input-postal" type="text" placeholder="Ingresá tu CP">
+                    <div class="destination"></div>
+                </div>
             </div>
         </div>
         <hr>
         <div class="cart-total shopping-border">
             <h3>Total</h3>
-            <p class="price">price</p>
+            <p class="price-total"></p>
         </div>
         <hr>
         <div class="cart-btn-buy shopping-border">
-            <button>Comprar</button>
+            <form action="/cart/shop" method="POST">
+                <button type="submit">Comprar</button>
+            </form>
         </div>
     </section>
 </div>
 </div>
     <%- include('./partials/footer') %>
+    <script src="/JS/cartModal.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-const {Carts, Purchases} = require = ('../database/models')
+const {Carts, Purchases} = require('../database/models')
 
 module.exports = {
 
@@ -10,7 +10,7 @@ module.exports = {
             }
         })
         .then(carts => {
-            return res.redirect ('/shoppingCart', {carts});
+            return res.render('shoppingCart', {carts});
         })
     },
 
@@ -20,7 +20,7 @@ module.exports = {
                 id: req.body.cartId
             }
         })
-        .then(()=>{ res.redirect('/shoppingCart')})
+        .then(()=>{ res.redirect('/cart')})
     },
 
     shop: (req, res) => {
@@ -34,7 +34,7 @@ module.exports = {
         })
         .then(carts => {
             carts.forEach(cart => {
-                totalPrice = totalPrice + cart.price
+                totalPrice += cart.price
             });
             return Purchases.findOne({
                 order: [['createdAt', 'DESC']]
@@ -54,12 +54,12 @@ module.exports = {
             },{
                 where: {
                     user_id: req.session.user.id,
-                    state: 1
+                    state: 0
                 }
             })
         })
         .then(() => {
-            res.redirect('user')
+            res.redirect('/')
         })
     }
 

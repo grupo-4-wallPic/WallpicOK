@@ -635,10 +635,6 @@ header {
     justify-content: space-around;
 }
 
-.menu {
-    display: none;
-}
-
 .header-btns-container {
     display: none;
 }
@@ -651,22 +647,6 @@ header {
 
 .logo-header a {
     display: flex;
-}
-
-.nav-search {
-    display: flex;
-}
-
-.nav-search-input {
-    width: 90%;
-    border: none;
-    font-size: 1em;
-}
-
-.nav-search-btn {
-    background-color: white;
-    border: none;
-    cursor: pointer;
 }
 
 .burger-menu,
@@ -690,6 +670,43 @@ header {
         text-decoration: none;
         color: black;
 
+}
+
+.sub-menu-header{
+    display: none ;
+    position: absolute ;
+    padding-top: 2% ;
+    width: fit-content;
+    background-color: var(--light-grey);
+    border-radius: 5%;
+    box-shadow: 0px 4px 12px -1px rgba(0,0,0,0.75);
+    padding: 1%;
+}
+
+.sub-menu-header ul li a{
+    text-decoration: none;
+    padding: 1%;
+}
+
+.initialbar a:hover + .sub-menu-header {
+    display: block;
+    position: absolute;
+}
+
+.categorias-header {
+    cursor: pointer;
+}
+
+.initialbar a:hover + .sub-menu-header ul{
+    display: block;
+}
+
+.initialbar a:hover + .sub-menu-header ul li{
+    display: block;
+}
+
+.ul-header :hover li a{
+    display: block;
 }
 
     .modal {
@@ -1042,6 +1059,7 @@ header {
     display: flex;
     justify-content: space-evenly;
     padding: 5px 0;
+    align-items: center;
 }
 
 .cart-btn-buy {
@@ -1205,6 +1223,17 @@ header {
 }
 
 /* Categorias */
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.contenedor section {
+    display: flex;
+}
 
 .todo {
     display: flex;
@@ -1837,6 +1866,12 @@ footer {
     text-align: center;
 }
 
+.sub-price, .price-total {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 0;
+}
+
 
 /*******Admin Styles********/
 
@@ -2158,9 +2193,6 @@ footer {
 }
 
 .compra-1 {
-    border-left: 1px dotted black;
-    border-bottom: 1px dotted black;
-    border-top: 1px dotted black;
     width: 28%;
     height: 20%;
     margin-left: 2%;

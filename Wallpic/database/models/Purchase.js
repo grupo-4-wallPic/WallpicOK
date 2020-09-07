@@ -8,9 +8,15 @@ module.exports = (sequelize, DataTypes) => {
     
     order_number: DataTypes.INTEGER,
     
-    total: DataTypes.INTEGER,
+    total: DataTypes.DECIMAL(6,2),
     
     user_id: DataTypes.INTEGER,
+
+    createdAt: DataTypes.DATE,
+
+    updatedAt: DataTypes.DATE,
+
+    deletedAt: DataTypes.DATE,
 
     },{tableName: "PURCHASE"});
     

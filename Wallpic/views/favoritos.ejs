@@ -10,7 +10,7 @@
     <%- include('./partials/header') %>
     <br>
     <div>
-        <h2 class="bienvenida-perfil">Bienvenide Nombre</h2>
+        <h2 class="bienvenida-perfil">Bienvenide <%= user.name %></h2>
     </div>
     <br>
     <br>
@@ -19,7 +19,7 @@
     <div class="contenedor-historial">
     <div class="datos-perfil">
         <ul>
-            <li class="nombre-perfil"><i class="fas fa-user-circle"></i>Nombre</li>
+            <li class="nombre-perfil"><i class="fas fa-user-circle"></i><%= user.name %></li>
             <li> <a href="/user/compras"><i class="fas fa-shopping-basket"></i>Mis Compras</a></li>
             <li> <a href="/user/favoritos"><i class="fas fa-star"></i>Mis Favoritos</a></li>
             <li> <a href="/user/datos"><i class="fas fa-id-badge"></i>Mis Datos</a></li>

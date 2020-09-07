@@ -3,42 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Categorias</title>
+    <title> Categoria </title>
     <%- include('./partials/head') %> 
 </head>
 <body>
+    <%- include('./partials/header') %>
+    <br>
+    <br>
     <div class="contenedor">
-        <%- include('./partials/header') %>
         <div class='categoria'>
-            <h2> Animales </h2>
+            <h2 class="category-title"></h2>
         </div>
-        <div class='todo'>
-        <% animales.forEach(product => { %>
+        <% product.forEach(product => { %>
+        <div class="todo">
             <div class="prod">
 				<section class="product">
                     <a class="link" href="/products/<%= product.id %>">
                         <div class='desvanecer'>
                         <div class='img-container'>
 						<figure class="image">
-							<img src="<%= product.image %>" alt="imagen de <%= product.name %>">
+							<img src="/Images/products/<%= product.images %>" alt="imagen de <%= product.name %>">
                         </figure>
                         </div>  
 						<article class="product-box">
                             <h2 class="nombre"><%= product.name %> </h2>
-							<p class="precio"> $<%= product.price[0] %> - $<%= product.price[4] %> </p>
+							<p class="precio"> $590 - $2990 </p>
                         </article>
                         </div>
                     </a>
+                    <input type="hidden" name="categoryId" id="categoryId" value="<%= product.categoryId %> ">
 				</section>
-			</div>
-        <% }); %> 
+			</div> 
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-
-        <%- include('./partials/footer') %>  
+        <% }); %>
     </div>
+    <br>
+    <br>
+    <br>
+    <%- include('./partials/footer') %>
 </body>
 </html>
