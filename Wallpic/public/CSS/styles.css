@@ -1219,7 +1219,9 @@ header {
 
 .contenedor{
     display: flex;
-    width: 90%;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .contenedor section {
