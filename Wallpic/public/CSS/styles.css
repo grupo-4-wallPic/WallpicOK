@@ -216,6 +216,8 @@
    
     .titulocategoria {
         text-align: center;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 30px;
     }
    
     .categorias-stand {
@@ -2521,6 +2523,8 @@ footer {
     
        .titulomasvendidos {
          margin: 5% auto;
+         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+         font-size: 30px;
        }
         .vermasvendidos {
            text-decoration: none;
@@ -5822,14 +5826,14 @@ flex-direction: row;
    #mayorista-animacion-9  {
        position: absolute;
        top: 840px;
-       left: 830px;
+       left: 860px;
    }
    #mayorista-animacion-2,#mayorista-animacion-4,
    #mayorista-animacion-6,#mayorista-animacion-8,
    #mayorista-animacion-10  {
        position: absolute;
        top: 840px;
-       left: 1000px;
+       left: 1030px;
    }
 
    #mayorista-animacion-1,#mayorista-animacion-2{
@@ -5893,7 +5897,7 @@ flex-direction: row;
     transition: ease-in-out;
     position: absolute;
        top: 840px;
-       left: 830px;
+       left: 860px;
        width: 320px;
         height: 200px;
         opacity: 0;
@@ -5948,9 +5952,12 @@ width: 80%;
     font-size: 20px;
 }
 .sub-menu-1 {
+    margin: 0;
     margin-left: 5%;
+
 }
 .sub-menu-2 {
+    margin: 0;
     margin-left: 3%;
 }
 
