@@ -44,11 +44,14 @@
         <% if (locals.user) { %>
             <form action="/logout" method="POST">
                 <div class="logdata">
-                <a class="logname" id="logname" href="/user" >Hola, <%= locals.user.name %> <%= locals.user.cart %>! </a>
+                <a class="logname" id="logname" href="/user" >Hola, <%= locals.user.name %></a>
                 <button class="logout" id="cerrar" type="submit">Cerrar sesión
                 </button>
             </div>
             </form>
+            <div class="cart-btn">
+                <a href="/cart" style="color: black;"><i class="fas fa-shopping-cart" id="open-cart"></i></a>
+            </div>
         <% } else {%>
 
             <!-- Si no estoy logueado -->
@@ -58,10 +61,6 @@
                 <a href="/register" id="abrir2" class="header-btn">Crear Cuenta</a>
             </div>
             <% }%>
-        <!-- Cart -->
-        <div class="cart-btn">
-            <a href="/cart" style="color: black;"><i class="fas fa-shopping-cart" id="open-cart"></i></a>
-        </div>
     </div>
 </header>
 <div class="fixheader"></div>

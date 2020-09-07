@@ -1219,7 +1219,9 @@ header {
 
 .contenedor{
     display: flex;
-    width: 90%;
+    flex-wrap: wrap;
+    width: 70%;
+    margin: 0 auto;
 }
 
 .contenedor section {
@@ -2846,7 +2848,7 @@ footer {
     }
 
     .header-btn {
-        border: 2px solid black;
+        border: 1px solid var(--dark-grey);
         background: white;
         padding: 4px;
         border-radius: 15px;
@@ -2856,7 +2858,7 @@ footer {
     }
 
     .header-btn:hover {
-        background: black;
+        background: var(--dark-grey);
         color: white;
     }
 
